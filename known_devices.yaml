@@ -1,0 +1,40 @@
+
+00_0a_f5_39_f5_c8:
+  hide_if_away: false
+  icon:
+  mac: 00:0A:F5:39:F5:C8
+  name: 00 0a f5 39 f5 c8
+  picture:
+  track: true
+
+dave:
+  hide_if_away: false
+  icon:
+  mac: BC:DD:C2:2A:02:5A
+  name: Dave
+  picture:
+  track: true
+
+begona:
+  hide_if_away: false
+  icon:
+  mac: 14:2D:27:4A:24:13
+  name: Begoña
+  picture:
+  track: true
+
+rubs:
+  hide_if_away: false
+  icon:
+  mac: 94:65:2D:D5:A4:E1
+  name: Rubs
+  picture:
+  track: true
+
+lucas:
+  hide_if_away: false
+  icon:
+  mac: 80:35:C1:08:8C:B8
+  name: Lucas
+  picture:
+  track: true

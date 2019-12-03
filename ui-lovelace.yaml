@@ -1,0 +1,20 @@
+title: Home Assistant
+resources:
+  - url: /local/mini-graph-card-bundle.js?v=0.2.4
+    type: module
+  - url: https://unpkg.com/moment@2.22.2/moment.js
+    type: js
+  - url: /local/custom_ui/calendar-card/calendar-card.js?v=1.0.1
+    type: module
+  - url: /local/mini-media-player-bundle.js?v=1.0.1
+    type: module
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/weather-card/weather-card.min.js
+    type: module
+  - url: /local/custom_ui/vertical-stack-in-card.js?v=0.0.9
+    type: js
+  - url: /local/simple-thermostat.js?v=1
+    type: module
+  - url: /local/custom_lovelace/xiaomi_vacuum_map_card/xiaomi-vacuum-map-card.js
+    type: module
+  - url: /local/slider-entity-row.js
+    type: module

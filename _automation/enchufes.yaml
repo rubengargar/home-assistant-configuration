@@ -1,0 +1,117 @@
+# - alias: Termo con calendario on
+#   trigger:
+#     platform: state
+#     entity_id: calendar.z_aut_termo
+#     to: 'on'
+
+#
+# - alias: Termo con calendario off
+#   trigger:
+#     platform: state
+#     entity_id: calendar.z_aut_termo
+#     to: 'off'
+#   action:
+#     service: homeassistant.turn_off
+#     entity_id: switch.Termo
+
+# - alias: Calefaccion con calendario on
+#   trigger:
+#     platform: state
+#     entity_id: calendar.z_aut_calefaccion
+#     to: 'on'
+    # condition:
+    #   condition: numeric_state
+    #   entity_id: sensor.Temperatura_habitacion
+    #   value_template: {{state.sensor.Temperatura_habitacion}}
+    #   below: 20
+#   action:
+#     service: homeassistant.turn_on
+#     entity_id: switch.Radiador
+#
+# - alias: Calefaccion con calendario off
+#   trigger:
+#     platform: state
+#     entity_id: calendar.z_aut_calefaccion
+#     to: 'off'
+#   action:
+#     service: homeassistant.turn_off
+#     entity_id: switch.Radiador
+      # data:
+      #   inline_keyboard:
+      #     - 'Task 1:/command1, Task 2:/command2'
+      #     - 'Task 3:/command3, Task 4:/command4'
+- alias: Termo con calendario on
+  trigger:
+    platform: state
+    entity_id: calendar.z_aut_termo
+    to: 'on'
+  action:
+    service: notify.Casacoru_bot
+    data:
+      message: "\U0001F6BF Se ha encendido el Termo"
+    # service: homeassistant.turn_on
+    # entity_id: switch.Termo
+- alias: Termo con calendario off
+  trigger:
+    platform: state
+    entity_id: calendar.z_aut_termo
+    to: 'off'
+  action:
+    service: notify.Casacoru_bot
+    data:
+      message: "\U00002744 Se ha apagado el Termo"
+
+- alias: Termo con dash
+  trigger:
+    - platform: state
+      entity_id: input_boolean.dashtermo
+      from: 'off'
+      to: 'on'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.Termo
+####################CALEFACCIÓN########################      
+- alias: Calefaccion con calendario on
+  trigger:
+    platform: state
+    entity_id: calendar.z_aut_calefaccion
+    to: 'on'
+  condition:
+    condition: numeric_state
+    entity_id: sensor.temperature_158d0001b8cb19
+    below: 20
+  action:
+  - service: homeassistant.turn_on
+    entity_id: switch.Radiador
+  - service: notify.Casacoru_bot
+    data:
+      message: "\U0001F525 Se ha encendido la calefacción"
+
+- alias: Temperatura habitación alcanzada
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.temperature_158d0001b8cb19
+    above: 21
+  action:
+  - service: homeassistant.turn_off
+    entity_id: switch.Radiador
+  - service: notify.Casacoru_bot
+    data:
+      message: "Se ha apagado la calefacción a {{states.sensor.temperature_158d0001b8cb19}} grados"
+  # action:
+  #   service: notify.Casacoru_bot
+  #   data:
+  #     message: "\U000026C4 Se ha apagado la calefacción"
+  #     inline_keyboard:
+  #         - 'Encender:/calefaccion'
+- alias: Calefaccion con calendario off
+  trigger:
+    platform: state
+    entity_id: calendar.z_aut_calefaccion
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    entity_id: switch.Radiador
+  - service: notify.Casacoru_bot
+    data:
+      message: "Se ha apagado la calefacción a {{states.sensor.temperature_158d0001b8cb19}} grados"

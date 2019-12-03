@@ -1,0 +1,10 @@
+Baterias:
+  name: Baterias
+  view: yes
+  icon: mdi:battery
+  entities:
+    - group.baterias_xiaomi
+
+Baterias_xiaomi:
+    - sensor.sensor_temperatura_salon
+    - sensor.sensor_temperatura_habitacion

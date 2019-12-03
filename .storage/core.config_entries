@@ -1,0 +1,219 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "track_home": true
+                },
+                "domain": "met",
+                "entry_id": "022a6918bada469eb91ef4c1650e1f0b",
+                "options": {},
+                "source": "onboarding",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Home",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "cloudhook": false,
+                    "webhook_id": "7295334fbb28f17a18d13f11a01537503c71c1956c0fb998852707e8e16bbf13"
+                },
+                "domain": "ifttt",
+                "entry_id": "bd12442d414446d4ac2bd01bf22df7a4",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "IFTTT Webhook",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "udn": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c"
+                },
+                "domain": "upnp",
+                "entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "UPnP/IGD",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "server": "Byzantium",
+                    "server_config": {
+                        "client_id": "9ec72227-a183-4237-aba9-530b002d4649",
+                        "token": "i2FbvyhYxzNFyKT7GDpT",
+                        "url": "https://192-168-0-13.fa979b669f0d4d8db488d00d64ab7eea.plex.direct:32400",
+                        "verify_ssl": true
+                    },
+                    "server_id": "5bb488dd8cdc7e658ec21b82562191262f073388"
+                },
+                "domain": "plex",
+                "entry_id": "e13f58731b3749809019532b11d7acb0",
+                "options": {
+                    "media_player": {
+                        "show_all_controls": true,
+                        "use_episode_art": true
+                    }
+                },
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Byzantium",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "host": "califood.local",
+                    "password": "misterwanda",
+                    "port": 6053
+                },
+                "domain": "esphome",
+                "entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "califood",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "broker": "core-mosquitto.local.hass.io",
+                    "discovery": true,
+                    "password": "aehaiR5Aiph4ooThe1tho1Thoc9Oyohth0iehohn8tie6AhW5IokeipeequohL0u",
+                    "port": 1883,
+                    "protocol": "3.1.1",
+                    "username": "homeassistant"
+                },
+                "domain": "mqtt",
+                "entry_id": "c63052377a164c33a211e9d8d1a62384",
+                "options": {},
+                "source": "hassio",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Mosquitto broker",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "appdaemon": true,
+                    "python_script": true,
+                    "sidepanel_icon": "mdi:alpha-c-box",
+                    "sidepanel_title": "Community",
+                    "theme": true,
+                    "token": "b0b9b4424908cf6ddf0c84030cf4d034dfb3fd97"
+                },
+                "domain": "hacs",
+                "entry_id": "4378702b24ff49739ad9863122548651",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {
+                    "debug": false,
+                    "email": "nelbu.93@gmail.com",
+                    "exclude_devices": [],
+                    "include_devices": [],
+                    "password": "zAv9TSNQHkgx2EY9xlt",
+                    "scan_interval": 60,
+                    "url": "amazon.es"
+                },
+                "domain": "alexa_media",
+                "entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "nelbu.93@gmail.com - amazon.es",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "tplink",
+                "entry_id": "30307933821c4bc3a747460a8f549a6f",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "TP-Link Smart Home",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "collection_days": [
+                        "sun"
+                    ],
+                    "date_format": "%d-%b-%Y",
+                    "exclude_dates": [],
+                    "first_month": "jan",
+                    "frequency": "weekly",
+                    "icon_normal": "mdi:trash-can",
+                    "icon_today": "mdi:delete-restore",
+                    "icon_tomorrow": "mdi:delete-circle",
+                    "include_dates": [],
+                    "last_month": "dec",
+                    "name": "Plastico",
+                    "unique_id": "f0c5c999-bbbf-4457-a4fc-5c189358c5bc",
+                    "verbose_format": "on {date}, in {days} days",
+                    "verbose_state": false
+                },
+                "domain": "garbage_collection",
+                "entry_id": "e85460086ab84b6da3d29e0d1dd3aefc",
+                "options": {
+                    "collection_days": [
+                        "sun"
+                    ],
+                    "date_format": "%d-%b-%Y",
+                    "exclude_dates": [],
+                    "first_month": "jan",
+                    "frequency": "weekly",
+                    "icon_normal": "mdi:trash-can",
+                    "icon_today": "mdi:delete-restore",
+                    "icon_tomorrow": "mdi:delete-circle",
+                    "include_dates": [],
+                    "last_month": "dec",
+                    "name": "Plastico",
+                    "unique_id": "f0c5c999-bbbf-4457-a4fc-5c189358c5bc",
+                    "verbose_format": "on {date}, in {days} days",
+                    "verbose_state": false
+                },
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Plastico",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

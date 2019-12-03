@@ -1,0 +1,11 @@
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+- platform: season
+  type: meteorological
+
+# - platform: workday
+#     country: ES
+#     province: GAL
+#     workdays: [mon, tue, wed, thu, fri]

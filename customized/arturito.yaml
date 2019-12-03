@@ -1,0 +1,17 @@
+  # Arturito
+
+sensor.hp_ilo_Ventilador_CPU
+sensor.hp_ilo_Runtime
+sensor.hp_ilo_Almacenamiento
+sensor.hp_ilo_Temperatura_ambiente
+
+sensor.synologydsm_volume_percentage_used
+sensor.synologydsm_cpu_total_load
+sensor.synologydsm_memory_real_usage
+sensor.synologydsm_network_up
+sensor.synologydsm_network_down
+
+#climate.dining_room:
+#  entity_picture: https://www.wired.com/images_blogs/business/2014/01/Nest-therm-Small.jpg
+#  friendly_name: Nest
+#  icon: mdi:water

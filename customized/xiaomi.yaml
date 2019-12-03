@@ -1,0 +1,14 @@
+sensor.humidity_158d0001b8cb19:
+  friendly_name: Humedad habitacion
+sensor.temperature_158d0001b8cb19:
+  friendly_name: Temperatura habitacion
+sensor.illuminance_7811dcb070a8:
+  friendly_name: Iluminacion pasillo
+sensor.humidity_158d0001a1f96b:
+  friendly_name: Humedad salón
+sensor.temperature_158d0001a1f96b:
+  friendly_name: Temperatura salón
+sensor.pressure_158d0001a1f96b:
+  friendly_name: Presión salón
+vacuum.Comemierda:
+  friendly_name: Comemierda

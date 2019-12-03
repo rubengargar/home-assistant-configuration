@@ -1,0 +1,8 @@
+- sensor.tp_link_amps
+  #  friendly_name: "Consumo"
+- sensor.tp_link_watts
+  #  friendly_name: "Consumo Actual"
+- sensor.tp_link_kw
+  #  friendly_name: "Consumo Total"
+- sensor.tp_link_volts
+  #  friendly_name: "Voltaje"

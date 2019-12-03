@@ -1,0 +1,99 @@
+#Speed Test
+# - speedtestdotnet:
+#   monitored_conditions:
+#     - ping
+#     - download
+#     - upload
+#PiHole
+# - platform: pi_hole
+#   host: localhost
+#   monitored_conditions:
+#     - ads_blocked_today
+#     - ads_percentage_today
+#     - domains_being_blocked
+#     - unique_clients
+#Certificados https://www.home-assistant.io/components/sensor.cert_expiry/
+# - platform: cert_expiry
+#   host: 'www.rubenga.eu'
+# #Cloudflare https://www.home-assistant.io/components/cloudflare/
+# cloudflare: 
+#   email: YOUR_EMAIL_ADDRESS
+#   api_key: YOUR_GLOBAL_API_KEY
+#   zone: EXAMPLE.COM
+#   records:
+#     - bin
+#     - www
+
+#HP iLO
+# - platform: hp_ilo
+#   host: !secret ilo_host
+#   username: !secret ilo_user
+#   password: !secret ilo_pwd
+#   monitored_variables:
+#     - name: Ventilador CPU
+#       sensor_type: server_health
+#       unit_of_measurement: '%'
+#       value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
+#     - name: Runtime
+#       sensor_type: server_power_on_time
+#       unit_of_measurement: 'minutes'
+#       value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
+#     - name: Temperatura Ambiente
+#       sensor_type: server_health
+#       unit_of_measurement: '°C'
+#       value_template: '{{ ilo_data.temperature["01-Inlet Ambient"].currentreading[0] }}'
+#     - name: Storage Status
+#       sensor_type: server_health
+#       value_template:  '{{ ilo_data.health_at_a_glance["storage"]["status"] }}'
+
+# HP Microserver Synology
+- platform: synologydsm
+  host: !secret dsm_host
+  port: 5001
+  username: !secret dsm_user
+  password: !secret dsm_pwd
+  monitored_conditions:
+    - volume_percentage_used
+    - volume_percentage_used
+    - volume_percentage_used
+    - cpu_total_load
+    - memory_real_usage
+    - network_up
+    - network_down
+
+# OctoPrint
+- platform: octoprint
+  name: OctoPrint
+  monitored_conditions:
+      - Current State
+      - Temperatures
+      - Job Percentage
+- platform: template
+  sensors:
+    hotend:
+      value_template: '{{ ((states.sensor.octoprint_actual_tool0_temp.state | float-32) | float*(5/9)) | round(2) }}'
+      unit_of_measurement: "°C"
+    bed:
+      value_template: '{{ ((states.sensor.octoprint_actual_bed_temp.state | float-32) | float*(5/9)) | round(2) }}'
+      unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: 'octoprint/event/PrinterStateChanged'
+  name: 'Printer Status'
+  value_template: '{{ value_json.state_string }}'
+
+################################################################################
+################################# Fitbit ####### ################################
+################################################################################
+#platform: fitbit
+  #clock_format: 24H
+  #monitored_resources:
+    #- "sleep/startTime"
+
+################################################################################
+################################# Xbox ####### ################################
+################################################################################
+- platform: xbox_live
+  api_key: !secret xbox_api
+  scan_interval: 60
+  xuid:
+      - !secret xbox_id

@@ -1,0 +1,188 @@
+homeassistant:
+
+  packages: !include_dir_named packages
+  customize: !include_dir_merge_named customized
+ 
+
+automation: !include automations.yaml
+automation old: !include_dir_merge_list automation
+
+camera: !include_dir_merge_list camaras
+  
+device_tracker: !include_dir_merge_list device_tracker
+
+input_boolean: !include input_boolean.yaml
+
+# input_number: !include input_number.yaml
+
+# input_select: !include input_select
+
+light: !include_dir_merge_list luces
+
+group: !include_dir_merge_named grupos
+
+media_player: !include_dir_merge_list media_player
+
+notify: !include_dir_merge_list notify
+
+sensor: !include_dir_merge_list sensors
+
+panel_iframe: !include iframe.yaml
+
+switch: !include_dir_merge_list switch
+
+zone: !include_dir_merge_list zones
+
+script: !include_dir_merge_named scripts
+
+
+
+lovelace:
+
+##########################
+ifttt:
+  key: !secret iftt_key
+
+# influxdb:
+#   host: !secret dsm_host
+
+
+
+#xiaomi
+# xiaomi_aqara:
+#  discovery_retry: 10
+#  gateways:
+#     - key: !secret key_xiaomi_gateway
+
+meross_cloud:
+  username: !secret meross_username
+  password: !secret meross_password
+
+yeelight:
+    devices:
+      192.168.0.22:
+        name: Luz
+      192.168.0.23:
+        name: Flexo
+
+hue:
+  bridges:
+    - host: !secret echo_ip
+emulated_hue:
+  host_ip: 192.168.0.12
+
+wake_on_lan:
+
+#telegram
+telegram_bot:
+- platform: polling
+  api_key: !secret tel_api
+  allowed_chat_ids:
+    - !secret tel_id
+    - !secret tel_id2
+
+# ##asistentes
+alexa:
+cloud:
+# google_assistant:
+#   project_id: !secret assistant_project
+#   client_id: !secret assistant_id
+#   access_token: !secret assistant_token
+#   #agent_user_id: [a string to identify user]
+#   #api_key: [an API Key generated for the Google Actions project]
+#   #exposed_domains:
+#   #  - switch
+#   #  - light
+#   #  - group
+
+#graficas
+history_graph:
+  gr1:
+    name: Temperatura
+    entities:
+      - sensor.yr_temperature
+      - sensor.pws_feelslike_c
+      - sensor.temperature_158d0001b8cb19
+    hours_to_show: 168
+    refresh: 60
+  gr2:
+    name: Humedad
+    entities:
+      - sensor.yr_humidity
+      - sensor.pws_relative_humidity
+      - sensor.humidity_158d0001b8cb19
+    hours_to_show: 168
+    refresh: 60
+  gr3:
+    name: Velocidad de Internet
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+    hours_to_show: 168
+    refresh: 60
+  gr4:
+    name: Termo
+    entities:
+      - sensor.tp_link_watts
+      - sensor.yr_temperature
+    hours_to_show: 168
+    refresh: 60
+#google
+google:
+  client_id: !secret id_google
+  client_secret: !secret secret_google
+
+weather:
+  - platform: aemet
+    name: AEMET
+    api_key: !secret aemet_token
+    station_id: !secret aemet_id
+
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes/
+
+# Enables configuration UI
+config:
+
+api:
+hassio:
+http:
+  ssl_certificate: !secret ssl_cert
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  # Uncomment this to add a password (recommended!)
+  #  api_password: !secret http_password
+   #Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+    # base_url: !secret https_url
+    # ssl_certificate: /ssl/fullchain.pem
+    # ssl_key: /ssl/privkey.pem
+  #  cors_allowed_origins:
+  #   - !secret http_url
+  #   - !secret https_url
+
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+# Discover some devices automatically
+discovery:
+
+system_health:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+  elevation: 27
+
+# Text to speech
+tts:
+  - platform: google_translate
+    language: 'es'

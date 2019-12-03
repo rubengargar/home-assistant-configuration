@@ -1,0 +1,6 @@
+iboolean_salida_casa:
+  control: hidden
+  name: Activar Salida
+  entities:
+    - input_boolean.salida_vacaciones
+#    - input_boolean.salida_vacaciones_dash

@@ -1,0 +1,127 @@
+# - alias: 'Time Calefaccion on'
+#   hide_entity: true
+#   trigger:
+#     platform: template
+#     value_template: '{{ states.sensor.time.state == states.sensor.alarm_time_Calefaccion.state }}'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: and
+#         conditions:
+#           - condition: state
+#             entity_id: input_boolean.alarmweekday_Calefaccion
+#             state: 'on'
+#           - condition: state
+#             entity_id: binary_sensor.working_day
+#             state: 'on'
+#       - condition: state
+#         entity_id: input_boolean.alarmweekday_Calefaccion
+#         state: 'off'
+#   action:
+#     - service: climate.set_operation_mode
+#       data:
+#         entity_id: climate.Calefaccion
+#         operation_mode: "auto"
+#     - service: climate.set_temperature
+#       data_template:
+#         entity_id: climate.Calefaccion
+#         temperature: '{{ states.input_number.set_temp_Calefaccion.state }}'
+
+# - alias: 'Turn Calefaccion ON boolean switch'
+#   hide_entity: true
+#   trigger:
+#     - platform: state
+#       entity_id: climate.Calefaccion
+#       to: 'heat'
+#   action:
+#     - service: homeassistant.turn_on
+#       entity_id: input_boolean.automode_Calefaccion
+
+# - alias: 'Turn time Calefaccion OFF'
+#   hide_entity: true
+#   trigger:
+#     - platform: state
+#       entity_id: input_boolean.timeonoff_Calefaccion
+#       to: 'off'
+#   action:
+#     - service: automation.turn_off
+#       entity_id: automation.time_sheduler_Calefaccion
+
+# - alias: 'Timer scheduler ON'
+#   hide_entity: true
+#   trigger:
+#     - platform: state
+#       entity_id: input_boolean.timeonoff_Calefaccion
+#       to: 'on'
+#   action:
+#     - service: automation.turn_on
+#       entity_id: automation.time_sheduler_Calefaccion
+
+# - alias: 'thermostat_Calefaccion Temp'
+#   hide_entity: true
+#   trigger:
+#     - platform: state
+#       entity_id: input_number.set_temp_Calefaccion
+#   action:
+#     - service: climate.set_temperature
+#       data_template:
+#         entity_id: climate.Calefaccion
+#         temperature: '{{ states.input_number.set_temp_Calefaccion.state }}'
+
+# - alias: "thermostat_Calefaccion On"
+#   hide_entity: true
+#   trigger:
+#     platform: state
+#     entity_id: input_boolean.automode_Calefaccion
+#     from: 'off'
+#     to: 'on'
+#   action:
+#     - service: climate.set_operation_mode
+#       data:
+#         entity_id: climate.Calefaccion
+#         operation_mode: "auto"
+#     - service: climate.set_temperature
+#       data_template:
+#         entity_id: climate.Calefaccion
+#         temperature: '{{ states.input_number.set_temp_Calefaccion.state }}'
+
+# - alias: "thermostat_Calefaccion Off"
+#   hide_entity: true
+#   trigger:
+#     platform: state
+#     entity_id: input_boolean.automode_Calefaccion
+#     from: 'on'
+#     to: 'off'
+#   action:
+#     - service: climate.set_operation_mode
+#       data:
+#         entity_id: climate.Calefaccion
+#         operation_mode: "off"
+
+# # thermostat INITIALIZATION
+# - alias: 'HASS startup'
+#   initial_state: true
+#   hide_entity: true
+#   trigger:
+#     - platform: homeassistant
+#       event: start
+#   action:
+#     - service: climate.set_operation_mode
+#       data:
+#         entity_id: climate.Calefaccion
+#         operation_mode: "off"
+#     - service: climate.set_operation_mode
+#       data:
+#         entity_id: climate.Calefaccion
+#         operation_mode: "off"
+#     - service: homeassistant.turn_on
+#       entity_id: input_boolean.timeonoff_Calefaccion
+#     - delay: '00:00:02'
+#     - service: homeassistant.turn_off
+#       entity_id: input_boolean.timeonoff_Calefaccion
+#     - service: homeassistant.turn_on
+#       entity_id: input_boolean.timeonoff_Calefaccion
+#     - delay: '00:00:02'
+#     - service: homeassistant.turn_off
+#       entity_id: input_boolean.timeonoff_Calefaccion
+

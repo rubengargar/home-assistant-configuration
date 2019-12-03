@@ -1,0 +1,31 @@
+############################################################
+# Control del nivel de bateria de los dispositivos Xiaomi
+############################################################
+- platform: template
+  sensors:
+    # sensor_movimiento_bateria:
+    #   friendly_name: Sensor Movimiento Aqara
+    #   value_template: '{{ states.binary_sensor.motion_sensor_158d000166128a.attributes.battery_level }}'
+    #   icon_template: '{%- if states.binary_sensor.motion_sensor_158d000166128a.attributes.battery_level <= 5 %}mdi:battery-outline{%- elif states.binary_sensor.motion_sensor_158d000166128a.attributes.battery_level >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.binary_sensor.motion_sensor_158d000166128a.attributes.battery_level|float / 10)|round*10}}{%- endif %}'
+    #   unit_of_measurement: "%"
+    # sensor_movimiento2_bateria:
+    #   friendly_name: Sensor Movimiento
+    #   value_template: '{{ states.binary_sensor.motion_sensor_158d00016d55b7.attributes.battery_level }}'
+    #   icon_template: '{%- if states.binary_sensor.motion_sensor_158d00016d55b7.attributes.battery_level <= 5 %}mdi:battery-outline{%- elif states.binary_sensor.motion_sensor_158d00016d55b7.attributes.battery_level >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.binary_sensor.motion_sensor_158d00016d55b7.attributes.battery_level|float / 10)|round*10}}{%- endif %}'
+    #   unit_of_measurement: "%"
+    # sensor_humo_bateria:
+    #   friendly_name: Sensor Humo
+    #   value_template: '{{ states.binary_sensor.smoke_sensor_158d0001d9388c.attributes.battery_level }}'
+    #   icon_template: '{%- if states.binary_sensor.smoke_sensor_158d0001d9388c.attributes.battery_level <= 5 %}mdi:battery-outline{%- elif states.binary_sensor.smoke_sensor_158d0001d9388c.attributes.battery_level >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.binary_sensor.smoke_sensor_158d0001d9388c.attributes.battery_level|float / 10)|round*10}}{%- endif %}'
+    #   unit_of_measurement: "%"
+    sensor_temperatura_salon:
+      friendly_name: Sensor Temperatura Habitación
+      value_template: '{{ states.sensor.temperature_158d0001a1f96b.attributes.battery_level }}'
+      icon_template: '{%- if states.sensor.temperature_158d0001a1f96b.attributes.battery_level <= 5 %}mdi:battery-outline{%- elif states.sensor.temperature_158d0001a1f96b.attributes.battery_level >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.sensor.temperature_158d0001a1f96b.attributes.battery_level|float / 10)|round*10}}{%- endif %}'
+      unit_of_measurement: "%"
+
+    sensor_temperatura_habitacion:
+      friendly_name: Sensor Temperatura Habitación
+      value_template: '{{ states.sensor.temperature_158d0001b8cb19.attributes.battery_level }}'
+      icon_template: '{%- if states.sensor.temperature_158d0001b8cb19.attributes.battery_level <= 5 %}mdi:battery-outline{%- elif states.sensor.temperature_158d0001b8cb19.attributes.battery_level >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.sensor.temperature_158d0001b8cb19.attributes.battery_level|float / 10)|round*10}}{%- endif %}'
+      unit_of_measurement: "%"

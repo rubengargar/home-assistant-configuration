@@ -1,0 +1,9 @@
+Aspiradora:
+  name: Luces
+  view: yes
+  icon: mdi:robot-vacuum-variant
+  entities:
+    - group.Comemierda
+
+Comemierda:
+    - states.vacuum

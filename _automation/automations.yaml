@@ -1,0 +1,10 @@
+# - id: '1545409948479'
+#   alias: Humedad notificacion
+#   trigger:
+#   - above: '85'
+#     entity_id: sensor.humidity_158d0001b8cb19
+#     platform: numeric_state
+#   action:
+#   - data:
+#       message: Home Assistant has started.
+#     service: notify.casacoru_bot

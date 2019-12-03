@@ -1,0 +1,16 @@
+ - platform: template
+    lights:
+      gateway_light:
+        friendly_name: "Gateway"
+        level_template: "{{ sensor.theater_brightness.attributes.lux|int }}"
+        value_template: "{{ sensor.theater_brightness.attributes.lux|int > 0 }}"
+        turn_on:
+          service: script.theater_lights_on
+        turn_off:
+          service: script.theater_lights_off
+        set_level:
+          service: script.theater_lights_level
+          data_template:
+            brightness: "{{ brightness }}"
+
+light.gateway_light_7811dcb070a8

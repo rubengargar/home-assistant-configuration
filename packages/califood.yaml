@@ -1,0 +1,51 @@
+input_number:
+  servo_control:
+    name: Servo Control
+    initial: 0
+    min: -100
+    max: 100
+    step: 1
+    mode: slider
+
+automation:
+  - alias: Alimentar al bicho
+    trigger:
+      platform: state
+      entity_id: input_number.servo_control
+    action:
+      - service: esphome.califood_control_servo
+        data_template:
+          level: '{{ trigger.to_state.state | int }}'
+switch:
+
+
+# script:        
+#   '57658975357': # unique script id
+#     alias: Alimentar al bicho
+#     sequence:
+#       - service: esphome.califood_control_servo
+#         data_template:
+#           level: '{{trigger.to_state.{{ states('input_number.big_fan_delay') | int  }}" | int }}'
+
+script:        
+  '57658975357': # unique script id
+    alias: Alimentar al bicho
+    sequence:
+      - service: esphome.califood_control_servo
+        data_template:
+          level: "{{ states('input_number.servo_control') }}"
+# script:        
+#   '57658975357': # unique script id
+#     alias: Alimentar al bicho
+#     sequence:
+#       - service: esphome.califood_control_servo
+#         data_template:
+#           level: '{{ trigger.to_state.state | int }}'  
+     
+sensor:
+  - platform: template
+    sensors:
+      cats_fed:
+        friendly_name: "Cats Fed at:"
+        value_template: "{{ as_timestamp(states.sensor.cats_last_fed_mqtt.state) | timestamp_custom(' %d/%m %H:%M ')  }}"
+        

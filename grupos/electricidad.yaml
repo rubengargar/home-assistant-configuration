@@ -1,0 +1,25 @@
+Electricidad:
+  name: Electricidad
+  view: yes
+  icon: mdi:flash
+  entities:
+    - group.luz
+    - group.enchufes
+
+# Grupos
+luz:
+  name: Datos de luz
+  entities:
+    - sensor.fecha
+    - sensor.precio_medio_kwh
+    - sensor.minimo_diario_kwh
+    - sensor.hora_minimo_diario_kwh
+    - sensor.maximo_diario_kwh
+    - sensor.hora_maximo_diario_kwh
+    - sensor.hora_recogida_de_datos
+    - sensor.actual_kwh
+enchufes:
+  name: Enchufes inteligentes
+  entities:
+    - sensor.radiador_kw
+    - sensor.termo_kw

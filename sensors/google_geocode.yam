@@ -1,0 +1,2 @@
+  - platform: google_geocode
+    origin: device_tracker.mobile_phone

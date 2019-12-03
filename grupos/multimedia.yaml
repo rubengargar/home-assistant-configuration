@@ -1,0 +1,41 @@
+multimedia:
+  name: Multimedia
+  view: yes
+  icon: mdi:television
+  entities:
+    - group.mibox
+    - group.plex
+    - group.pocketcasts
+    - group.xboxlive
+    - group.spotify
+
+
+MiBox:
+  name: MiBox
+  control: hidden
+  entities:
+    - media_player.cast
+
+Plex:
+  name: Plex
+  #control: hidden
+  entities:
+    - media_player.plex
+
+PocketCasts:
+  name: PocketCasts
+  control: hidden
+  entities:
+    - sensor.pocketcasts_unlistened_episodes
+
+XboxLive:
+  name: Xbox
+  control: hidden
+  entities:
+    - sensor.xbox_live
+
+Spotify:
+  name: spotify
+  control: hidden
+  entities:
+    - media_player.spotify

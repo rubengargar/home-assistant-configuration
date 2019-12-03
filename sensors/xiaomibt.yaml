@@ -1,0 +1,6 @@
+platform: mitemp_bt
+mac: !secret xiaomibt
+monitored_conditions:
+  - temperature
+  - humidity
+  - batery

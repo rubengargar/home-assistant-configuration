@@ -1,0 +1,8 @@
+alias: LogTermo
+trigger:
+  platform: homeassistant
+  entity_id: sensor.tp_link_kw
+  above: 0
+action:
+  service: ifttt.trigger
+  data:  {"event": "Termo_log", "value1": "sensor.tp_link_kw"}

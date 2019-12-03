@@ -1,0 +1,90 @@
+# - alias: Encender deshumificador salón
+#   trigger:
+#     platform: template
+#     value_template: "{% if states('sensor.humidity_158d0001a1f96b') | int > 60} true {% endif %}"
+#   condition:
+#       condition: time
+#       after: "08:00:00"
+#       before: "23:00:00"
+#   action:
+#     service: notify.Casacoru_bot
+#     data:
+#       message: "Enciende el deshumificador en el salón, la humedad está a {{states.sensor.humidity_158d0001a1f96b.state}}"
+
+# - alias: Encender deshumificador habitación
+#   trigger:
+#     platform: template
+#     value_template: "{% if states('sensor.humidity_158d0001b8cb19') | int > 60} true {% endif %}"
+#   condition:
+#       condition: time
+#       after: "08:00:00"
+#       before: "23:00:00"
+#   action:
+#     service: notify.Casacoru_bot
+#     data:
+#       message: "Enciende el deshumificador en la habitación, la humedad está a {{states.sensor.humidity_158d0001b8cb19.state}}"
+
+# - id: '1545409948479'
+#   alias: Humedad habitación
+#   trigger:
+#   - above: '60'
+#     entity_id: sensor.humidity_158d0001b8cb19
+#     platform: numeric_state
+#   condition:
+#     condition: time
+#     after: "08:00:00"
+#     before: "23:59:59"
+#   action:
+#   - data:
+#       message: Enciende el deshumidificador en la habitación, la humedad del {{states.sensor.humidity_158d0001b8cb19.state}}%
+#     service: notify.casacoru_bot
+
+# - id: '1545409948480'
+#   alias: Humedad salón
+#   trigger:
+#   - above: '60'
+#     entity_id: sensor.humidity_158d0001a1f96b
+#     platform: numeric_state
+#   condition:
+#     condition: time
+#     after: "08:00:00"
+#     before: "23:59:59"
+#   action:
+#   - data:
+#       message: Enciende el deshumidificador en el salón, la humedad del {{states.sensor.humidity_158d0001a1f96b.state}}%
+#     service: notify.casacoru_bot
+
+
+alias: Humedad habitación
+id: '1545409948479'
+trigger:
+  platform: template
+  value_template: {states.sensor.humidity_158d0001b8cb19.state|float}
+condition:
+  condition: time
+  after: "08:00:00"
+  before: "23:59:59"
+  condition: numeric_state
+  entity_id: {states.sensor.humidity_158d0001b8cb19.state|float}
+  above: input_number.humedad_des
+action:
+- data:
+    message: Enciende el deshumidificador en la habitación, la humedad del {{states.sensor.humidity_158d0001b8cb19.state}}%
+  service: notify.casacoru_bot
+
+alias: Humedad salón
+id: '1545409948480'
+trigger:
+  platform: template
+  value_template: {states.sensor.humidity_158d0001a1f96b.state|float}
+condition:
+  condition: time
+  after: "08:00:00"
+  before: "23:59:59"
+  condition: numeric_state
+  entity_id: {states.sensor.humidity_158d0001a1f96b.state|float}
+  above: input_number.humedad_des
+action:
+- data:
+    message: Enciende el deshumidificador en la habitación, la humedad del {{states.sensor.humidity_158d0001b8cb19.state}}%
+  service: notify.casacoru_bot

@@ -1,0 +1,140 @@
+{
+    "data": [
+        {
+            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Rotaci\u00f3n servo",
+                    "icon": "mdi:rotate-3d-variant",
+                    "initial": 0.0,
+                    "max": 100.0,
+                    "min": -100.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "be27702753aa4d62a0344265503940c0",
+                    "parent_id": null,
+                    "user_id": "2f174d04fa98465ca7549adb03093ace"
+                },
+                "entity_id": "input_number.servo_control",
+                "last_changed": "2019-12-03T15:16:32.071100+00:00",
+                "last_updated": "2019-12-03T15:16:32.071100+00:00",
+                "state": "50.0"
+            }
+        },
+        {
+            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "state": {
+                "attributes": {
+                    "entity_picture": "/local/casa.jpg",
+                    "friendly_name": "Salida De Casa",
+                    "icon": "mdi:security-home"
+                },
+                "context": {
+                    "id": "185ad838672341bd915856a83a8412d7",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.salida_vacaciones",
+                "last_changed": "2019-12-03T13:01:01.854455+00:00",
+                "last_updated": "2019-12-03T13:01:01.854455+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Encender Termo desde el Ba\u00f1o",
+                    "icon": "mdi:water"
+                },
+                "context": {
+                    "id": "e4d07222191f4ec0a2abc2a11018c565",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.dashtermo",
+                "last_changed": "2019-12-03T13:01:01.855102+00:00",
+                "last_updated": "2019-12-03T13:01:01.855102+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Moho habitaci\u00f3n",
+                    "id": "1550330341212",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "8521391f3057449a8647ce812ff5aef0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.moho_habitacion",
+                "last_changed": "2019-12-03T16:29:20.929435+00:00",
+                "last_updated": "2019-12-03T16:29:20.929435+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Moho habitaci\u00f3n",
+                    "id": "1550330341211",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "6c3bd3bebc694d94b33f6cb7fe352631",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.moho_habitacion_2",
+                "last_changed": "2019-12-03T16:29:20.933174+00:00",
+                "last_updated": "2019-12-03T16:29:20.933174+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Alimentar al bicho",
+                    "last_triggered": "2019-12-03T15:16:32.247048+00:00"
+                },
+                "context": {
+                    "id": "7d445b93d555490e82d95465e76d92de",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.alimentar_al_bicho_2",
+                "last_changed": "2019-12-03T16:29:20.937545+00:00",
+                "last_updated": "2019-12-03T16:29:20.937545+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-11-29T00:38:37.037268+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Write Servo Value to ESP",
+                    "last_triggered": "2019-11-29T00:26:32.854648+00:00"
+                },
+                "context": {
+                    "id": "d46906733a5d4eaf80a5b9d2f043747c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.write_servo_value_to_esp",
+                "last_changed": "2019-11-28T22:52:23.330685+00:00",
+                "last_updated": "2019-11-29T00:26:32.855269+00:00",
+                "state": "on"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}

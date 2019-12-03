@@ -1,0 +1,25 @@
+- id: '1550330341211'
+  alias: Moho habitación
+  trigger:
+  - above: '75'
+    entity_id: sensor.moho_dormitorio
+    platform: numeric_state
+  condition: []
+  action:
+  - service: notify.casacoru_bot
+    data:
+      message: La probabilidad de que se forme moho en la habitación es superior al
+        75%; abre la ventana o pon el deshumificador.
+- id: '1550330341212'
+  alias: Moho habitación
+  trigger:
+  - above: '75'
+    entity_id: sensor.moho_dormitorio
+    platform: numeric_state
+  condition: []
+  action:
+  - service: notify.casacoru_bot
+    data:
+      message: La probabilidad de que se forme moho en la habitación es superior al
+        75%; abre la ventana o pon el deshumificador.
+

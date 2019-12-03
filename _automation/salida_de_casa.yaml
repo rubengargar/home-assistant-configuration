@@ -1,0 +1,126 @@
+################################################################################
+########### Activación/Desactivación Automatismos Salida De Casa ###############
+################################################################################
+- alias: Salida De Casa O Vacaciones
+  trigger:
+    - platform: state
+      entity_id: input_boolean.salida_vacaciones
+      from: 'off'
+      to: 'on'
+  action:
+    - service: light.turn_off
+      entity_id: light.gateway_light_7811dcb070a8
+    - service: switch.turn_on
+      entity_id: switch.echo_dot_de_ruben_do_not_disturb_switch
+    - service: switch.turn_on
+      entity_id: switch.echo_plus_de_ruben_do_not_disturb_switch
+    - service: homeassistant.turn_off
+      entity_id: automation.mensajes_persiana
+    - service: homeassistant.turn_off
+      entity_id: automation.enchufes
+    - service: xiaomi_aqara.play_ringtone
+      data:
+        gw_mac: !secret sid_xiaomi_gateway
+        ringtone_id: 10002
+        ringtone_vol: 10
+    - service: notify.Casacoru_bot
+      data:
+        message: "\U0001F168 Has activado el modo vacaciones"
+
+- alias: Llegada A Casa O Vacaciones
+  trigger:
+    - platform: state
+      entity_id: input_boolean.salida_vacaciones
+      from: 'on'
+      to: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: light.gateway_light_7811dcb070a8
+    - service: homeassistant.turn_on
+      entity_id: automation.mensajes_persiana
+    - service: homeassistant.turn_on
+      entity_id: automation.enchufes
+    - service: xiaomi_aqara.play_ringtone
+      data:
+        gw_mac: !secret sid_xiaomi_gateway
+        ringtone_id: 10002
+        ringtone_vol: 10
+    - service: notify.Casacoru_bot
+      data:
+        message: "\U0001F3e0 Has vuelto a casa"
+
+
+################################################################################
+##### Activación/Desactivación Automatismos Salida De Casa De Forma Auto #######
+################################################################################
+#
+# - alias: Salida De Casa O Vacaciones De Forma Automatica
+#   initial_state: false
+#   trigger:
+#     - platform: state
+#       entity_id: 'device_tracker.movil_nexus_6x_alicia, device_tracker.nexus_pixel_xl_juan'
+#       from: 'home'
+#       to: 'not_home'
+#   action:
+#     - service: homeassistant.turn_on
+#       entity_id: automation.puerta_entrada_abierta
+#     - service: homeassistant.turn_on
+#       entity_id: automation.puerta_entrada_cerrada
+#     - service: homeassistant.turn_on
+#       entity_id: automation.puerta_terraza_abierta
+#     - service: homeassistant.turn_on
+#       entity_id: automation.puerta_terraza_cerrada
+#     - service: homeassistant.turn_on
+#       entity_id: automation.puerta_balcon_abierta
+#     - service: homeassistant.turn_on
+#       entity_id: automation.puerta_balcon_cerrada
+#     - service: homeassistant.turn_off
+#       entity_id: automation.aa_comedor_on_temperatura_comedor_alta
+#     - service: homeassistant.turn_off
+#       entity_id: automation.aa_estudio_on_temperatura_estudio_alta
+#     - service: switch.turn_off
+#       entity_id: switch.aa_comedor_onoff
+#     - service: switch.turn_off
+#       entity_id: switch.aa_estudio_onoff
+#     - service: homeassistant.turn_off
+#       entity_id: input_boolean.interrruptor_automatismos_aires_casa
+#     - service: xiaomi_aqara.play_ringtone
+#       data:
+#         gw_mac: !secret sid_xiaomi_gateway
+#         ringtone_id: 10002
+#         ringtone_vol: 10
+#     - service: notify.segarratelegrampuertas
+#       data:
+#         message: "Se Han Activado Los Sensores De Forma Automática"
+#
+# - alias: Llegada A Casa O Vacaciones De Forma Automatica
+#   initial_state: false
+#   trigger:
+#     - platform: state
+#       entity_id: 'device_tracker.movil_nexus_6x_alicia, device_tracker.nexus_pixel_xl_juan'
+#       from: 'not_home'
+#       to: 'home'
+# #  condition: state
+# #      entity_id: input_boolean.salida_vacaciones
+# #      state: 'on'
+#   action:
+#     - service: homeassistant.turn_off
+#       entity_id: automation.puerta_entrada_abierta
+#     - service: homeassistant.turn_off
+#       entity_id: automation.puerta_entrada_cerrada
+#     - service: homeassistant.turn_off
+#       entity_id: automation.puerta_terraza_abierta
+#     - service: homeassistant.turn_off
+#       entity_id: automation.puerta_terraza_cerrada
+#     - service: homeassistant.turn_off
+#       entity_id: automation.puerta_balcon_abierta
+#     - service: homeassistant.turn_off
+#       entity_id: automation.puerta_balcon_cerrada
+#     - service: xiaomi_aqara.play_ringtone
+#       data:
+#         gw_mac: !secret sid_xiaomi_gateway
+#         ringtone_id: 10003
+#         ringtone_vol: 10
+#     - service: notify.segarratelegrampuertas
+#       data:
+#         message: "Se Han Desactivado Los Sensores Con De Forma Automatica"

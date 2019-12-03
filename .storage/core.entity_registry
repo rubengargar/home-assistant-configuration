@@ -1,0 +1,476 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.updater",
+                "name": null,
+                "platform": "updater",
+                "unique_id": "updater"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "person.ruben",
+                "name": null,
+                "platform": "person",
+                "unique_id": "d013fc4665dc46a0a1bc9b716ca0ec86"
+            },
+            {
+                "config_entry_id": "022a6918bada469eb91ef4c1650e1f0b",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "weather.casa",
+                "name": null,
+                "platform": "met",
+                "unique_id": "home"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_bytes_sent"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_packets_received"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_packets_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_packets/sec_sent"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_packets_sent"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_kbyte_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_kbyte_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_packets_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_packets/sec_received"
+            },
+            {
+                "config_entry_id": "f194fb33a06f43ca946f1cad67588a84",
+                "device_id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "disabled_by": null,
+                "entity_id": "sensor.technicolor_tc7230_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c_bytes_received"
+            },
+            {
+                "config_entry_id": "e13f58731b3749809019532b11d7acb0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.plex_byzantium",
+                "name": null,
+                "platform": "plex",
+                "unique_id": "sensor-5bb488dd8cdc7e658ec21b82562191262f073388"
+            },
+            {
+                "config_entry_id": "e13f58731b3749809019532b11d7acb0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.plex_gardenia",
+                "name": null,
+                "platform": "plex",
+                "unique_id": "5bb488dd8cdc7e658ec21b82562191262f073388:f0b30b68-bd1a-4c06-a243-fc7af99201cd"
+            },
+            {
+                "config_entry_id": "4378702b24ff49739ad9863122548651",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.hacs",
+                "name": null,
+                "platform": "hacs",
+                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "media_player.echo_dot_de_ruben",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "6f3185842b57459188cfe666df04c803",
+                "disabled_by": null,
+                "entity_id": "media_player.ruben_s_alexa_apps",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "ONEPLUSA5010930FA29F369EDE09"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "media_player.echo_plus_de_ruben",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "d2a99312d06c482eaea39d2c958e93a1",
+                "disabled_by": null,
+                "entity_id": "media_player.this_device",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "fe19975813e24ff29d4b7e4cd3e2220c"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "9ec329c278914e58ab964cd48ce9c551",
+                "disabled_by": null,
+                "entity_id": "media_player.ruben_s_echosim_beta",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "50ff17a93591404e94a922cee7dcf441"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "switch.echo_dot_de_ruben_repeat_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT_repeat"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "switch.echo_dot_de_ruben_shuffle_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT_shuffle"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "switch.echo_dot_de_ruben_do_not_disturb_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT_do not disturb"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "d2a99312d06c482eaea39d2c958e93a1",
+                "disabled_by": null,
+                "entity_id": "switch.this_device_repeat_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "fe19975813e24ff29d4b7e4cd3e2220c_repeat"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "6f3185842b57459188cfe666df04c803",
+                "disabled_by": null,
+                "entity_id": "switch.ruben_s_alexa_apps_repeat_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "ONEPLUSA5010930FA29F369EDE09_repeat"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "switch.echo_plus_de_ruben_repeat_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3_repeat"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "6f3185842b57459188cfe666df04c803",
+                "disabled_by": null,
+                "entity_id": "switch.ruben_s_alexa_apps_do_not_disturb_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "ONEPLUSA5010930FA29F369EDE09_do not disturb"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "switch.echo_plus_de_ruben_do_not_disturb_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3_do not disturb"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "switch.echo_plus_de_ruben_shuffle_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3_shuffle"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "6f3185842b57459188cfe666df04c803",
+                "disabled_by": null,
+                "entity_id": "switch.ruben_s_alexa_apps_shuffle_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "ONEPLUSA5010930FA29F369EDE09_shuffle"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "d2a99312d06c482eaea39d2c958e93a1",
+                "disabled_by": null,
+                "entity_id": "switch.this_device_shuffle_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "fe19975813e24ff29d4b7e4cd3e2220c_shuffle"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "d2a99312d06c482eaea39d2c958e93a1",
+                "disabled_by": null,
+                "entity_id": "switch.this_device_do_not_disturb_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "fe19975813e24ff29d4b7e4cd3e2220c_do not disturb"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "sensor.echo_plus_de_ruben_next_timer",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3_next Timer"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "sensor.echo_plus_de_ruben_next_alarm",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3_next Alarm"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "d2a99312d06c482eaea39d2c958e93a1",
+                "disabled_by": null,
+                "entity_id": "sensor.this_device_next_reminder",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "fe19975813e24ff29d4b7e4cd3e2220c_next Reminder"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "sensor.echo_dot_de_ruben_next_reminder",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT_next Reminder"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "sensor.echo_dot_de_ruben_next_timer",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT_next Timer"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "bf4503d06b7045cb9cacf91b63a62045",
+                "disabled_by": null,
+                "entity_id": "sensor.echo_dot_de_ruben_next_alarm",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G0911W0894262WDT_next Alarm"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "95358c32a5964b3a9a12ff5375aeb441",
+                "disabled_by": null,
+                "entity_id": "sensor.echo_plus_de_ruben_next_reminder",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "G2A0WK04841704E3_next Reminder"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "9ec329c278914e58ab964cd48ce9c551",
+                "disabled_by": null,
+                "entity_id": "sensor.ruben_s_echosim_beta_next_alarm",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "50ff17a93591404e94a922cee7dcf441_next Alarm"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "9ec329c278914e58ab964cd48ce9c551",
+                "disabled_by": null,
+                "entity_id": "sensor.ruben_s_echosim_beta_next_timer",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "50ff17a93591404e94a922cee7dcf441_next Timer"
+            },
+            {
+                "config_entry_id": "30307933821c4bc3a747460a8f549a6f",
+                "device_id": "b857632aadde4aefb39d5103df682054",
+                "disabled_by": null,
+                "entity_id": "switch.radiador",
+                "name": null,
+                "platform": "tplink",
+                "unique_id": "50:C7:BF:BD:91:95"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "9ec329c278914e58ab964cd48ce9c551",
+                "disabled_by": null,
+                "entity_id": "switch.ruben_s_echosim_beta_shuffle_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "50ff17a93591404e94a922cee7dcf441_shuffle"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "9ec329c278914e58ab964cd48ce9c551",
+                "disabled_by": null,
+                "entity_id": "switch.ruben_s_echosim_beta_do_not_disturb_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "50ff17a93591404e94a922cee7dcf441_do not disturb"
+            },
+            {
+                "config_entry_id": "c89d499c25554491a91a45d596ed9bfd",
+                "device_id": "9ec329c278914e58ab964cd48ce9c551",
+                "disabled_by": null,
+                "entity_id": "switch.ruben_s_echosim_beta_repeat_switch",
+                "name": null,
+                "platform": "alexa_media",
+                "unique_id": "50ff17a93591404e94a922cee7dcf441_repeat"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "sensor.califood_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bcddc22a025a-wifisignal"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "sensor.cat_food_remaining",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "califoodsensorcat_food_remaining"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "sensor.califood_system_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bcddc22a025a-uptime"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "switch.restart_catfeeder",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "califoodswitchrestart_catfeeder"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "sensor.cat_food_remaining_2",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "califoodsensorcat_food_remaining_"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "sensor.porcentaje_pienso",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "califoodsensorporcentaje_pienso_"
+            },
+            {
+                "config_entry_id": "0a258d543a0640a7b2617038a7654c1e",
+                "device_id": "c39cd02768fc44d2a1e64907988effbf",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.califooder",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "califoodbinary_sensorcalifooder"
+            },
+            {
+                "config_entry_id": "e85460086ab84b6da3d29e0d1dd3aefc",
+                "device_id": "e6b5e7cc68044b44ac1453ba6d59e945",
+                "disabled_by": null,
+                "entity_id": "sensor.plastico",
+                "name": null,
+                "platform": "garbage_collection",
+                "unique_id": "f0c5c999-bbbf-4457-a4fc-5c189358c5bc"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

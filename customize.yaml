@@ -1,0 +1,26 @@
+vacuum.Comemierda:
+  friendly_name: Comemierda
+vacuum.xiaomi_vacuum_cleaner:
+  friendly_name: Comemierda
+input_number.servo_control:
+  friendly_name: Rotación servo
+  icon: mdi:rotate-3d-variant
+script.57658975357:
+  icon: mdi:paw
+input_boolean.salida_vacaciones_dash:
+  friendly_name: Salida De Casa Botón Dash
+  icon: mdi:home
+sensor.humidity_158d0001b8cb19:
+  friendly_name: Humedad habitacion
+sensor.temperature_158d0001b8cb19:
+  friendly_name: Temperatura habitacion
+sensor.illuminance_7811dcb070a8:
+  friendly_name: Iluminacion pasillo
+sensor.humidity_158d0001a1f96b:
+  friendly_name: Humedad salón
+sensor.temperature_158d0001a1f96b:
+  friendly_name: Temperatura salón
+sensor.pressure_158d0001a1f96b:
+  friendly_name: Presión salón
+device_tracker.00_0a_f5_39_f5_c8:
+  friendly_name: xiaomi

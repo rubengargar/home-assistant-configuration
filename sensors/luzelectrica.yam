@@ -1,0 +1,42 @@
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Fecha"
+  select: "span:nth-of-type(20)"
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Precio Medio (€/kWH)"
+  select: "span:nth-of-type(19)"
+  value_template: '{{ value.split()[0] }}'
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Hora Minimo Diario (€/KWH)"
+  select: "span:nth-of-type(21)"
+  value_template: '{{ value.split()[0] }}' 
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Minimo Diario (€/KWH)"
+  select: "span:nth-of-type(22)"
+  value_template: '{{ value.split()[0] }}'
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Hora Máximo Diario (€/KWH)"
+  select: "span:nth-of-type(23)"
+  value_template: '{{ value.split()[0] }}'
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Maximo Diario (€/KWH)"
+  select: "span:nth-of-type(24)"
+  value_template: '{{ value.split()[0] }}'
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Actual (€/KWH)"
+  select: "span:nth-of-type(18)"
+  value_template: '{{ value.split()[0] }}'
+- platform: scrape
+  resource: https://tarifaluzhora.es/?tarifa=discriminacion
+  name: "Hora Recogida de Datos"
+  select: "h5:nth-of-type(1)"
+  value_template: '{{ value.split()[3] }}'
+
+
+##tuto: https://domology.es/scraping-de-datos-de-cualquier-web/

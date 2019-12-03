@@ -1,0 +1,21 @@
+default_view:
+  name: Home
+  icon: mdi:home
+  view: yes
+  entities:
+    - group.iboolean_salida_casa
+    - group.DSM
+    - group.ILO
+    - group.velocidad_de_internet
+    - group.actual
+    - group.prevision
+    - group.date
+    - group.Termo
+    - group.Calefaccion
+    - vacuum.Comemierda
+    - history_graph.humedad
+    - history_graph.temperatura
+    - history_graph.termo
+    - history_graph.velocidad_de_internet
+    #- history_graph.Temperatura
+    #- history_graph.Humedad

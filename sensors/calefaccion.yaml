@@ -1,0 +1,24 @@
+#  - platform: template
+#    sensors:
+#      alarm_time_Calefaccion:
+#        friendly_name: 'Time'
+#        value_template: '{{ "%0.02d:%0.02d" | format(states("input_number.alarmhour_Calefaccion") | int, states("input_number.alarmminutes_Calefaccion") | int) }}'
+# Moho https://www.home-assistant.io/components/sensor.mold_indicator/
+- platform: mold_indicator
+  name: moho_salon
+  indoor_temp_sensor: sensor.temperature_158d0001a1f96b
+  indoor_humidity_sensor: sensor.humidity_158d0001a1f96b
+  outdoor_temp_sensor: sensor.yr_temperature
+  calibration_factor: 2.0
+- platform: mold_indicator
+  name: moho_dormitorio
+  indoor_temp_sensor:  sensor.temperature_158d0001b8cb19
+  indoor_humidity_sensor: sensor.humidity_158d0001b8cb19
+  outdoor_temp_sensor: sensor.yr_temperature
+  calibration_factor: 2.0
+- platform: mold_indicator
+  name: moho_camaras
+  indoor_temp_sensor: sensor.temperature_158d0001a1f96b
+  indoor_humidity_sensor: sensor.humidity_158d0001a1f96b
+  outdoor_temp_sensor: sensor.yr_temperature
+  calibration_factor: 2.0

@@ -1,0 +1,19 @@
+################################################################################
+############################ Nombres Miscelanea ################################
+################################################################################
+input_boolean.salida_vacaciones:
+  friendly_name: Salida De Casa
+  #icon: mdi:home
+  entity_picture: /local/casa.jpg
+
+input_boolean.salida_vacaciones_dash:
+  friendly_name: Salida De Casa Botón Dash
+  icon: mdi:home
+
+input_boolean.luz_gateway_xiaomi_2_min:
+  friendly_name: Luz Gateway 2 Minutos
+  entity_picture: /local/reloj_arena.jpg
+
+input_boolean.luz_gateway_xiaomi_2_min_dash:
+  friendly_name: Luz Gateway 2 Minutos Dash
+  entity_picture: /local/reloj_arena.jpg

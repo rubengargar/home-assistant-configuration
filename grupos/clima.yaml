@@ -1,0 +1,62 @@
+Clima:
+  name: Clima
+  view: yes
+  icon: mdi:weather-sunset
+  entities:
+    - group.dormitorio
+    - group.salon
+    - group.actual
+    - group.prevision
+    - group.date
+    #- history_graph.Temperatura
+    #- history_graph.Humedad
+Dormitorio:
+    - climate.Calefaccion
+    - sensor.humidity_158d0001b8cb19
+    - input_number.humedad_des
+    - input_boolean.automode_Calefaccion
+    - input_boolean.timeonoff_Calefaccion
+    - sensor.alarm_time_Calefaccion
+    - input_number.set_temp_Calefaccion
+    - input_number.alarmhour_Calefaccion
+    - input_number.alarmminutes_Calefaccion
+    - input_boolean.alarmweekday_Calefaccion
+    - switch.radiador
+    - sensor.radiador_amps
+    - sensor.radiador_watts
+    - sensor.radiador_kw
+    - sensor.radiador_volts
+Salon:
+    - sensor.temperature_158d0001a1f96b
+    - sensor.humidity_158d0001a1f96b
+    - input_number.humedad_des
+
+Actual:
+  name: Estado Actual
+  entities:
+    - sensor.pws_alerts
+    - sensor.waqi
+    - sensor.pws_feelslike_c
+    - sensor.pws_temp_c
+    - sensor.pws_weather
+    - sensor.pws_relative_humidity
+    - sensor.yr_humidity
+    - sensor.pws_temp_high_1d_c
+    - sensor.pws_temp_low_1d_c
+
+Prevision:
+  name: Prevision
+  entities:
+    - sensor.pws_weather_1d_metric
+    - sensor.pws_weather_2d_metric
+    - sensor.pws_weather_3d_metric
+    - sensor.pws_precip_1d
+    - sensor.pws_precip_2d
+    - sensor.pws_precip_3d
+
+Date:
+  name: Date
+  view: no
+  entities:
+    - sensor.time_date_time
+    - sensor.time_date_date

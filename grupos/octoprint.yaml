@@ -1,0 +1,23 @@
+Anet:
+  name: Anet
+  view: yes
+  icon: mdi:printer-3d
+  entities:
+    - group.octoprint
+    - group.camara
+
+Octoprint:
+    - sensor.printer_status
+    - sensor.bed
+    - sensor.octoprint_actual_bed_temp
+    - sensor.hotend
+    - sensor.octoprint_actual_tool0_temp
+    - sensor.octoprint_current_state
+    - sensor.octoprint_job_percentage
+    - sensor.octoprint_target_bed_temp
+    - sensor.octoprint_target_tool0_temp
+    - binary_sensor.octoprint_Printing
+    - binary_sensor.octoprint_Printing_Error
+
+Camara:
+    - camera.ip_webcam

@@ -1,0 +1,9 @@
+- platform: tplink
+  host: !secret iptermo
+  name: "Termo"
+  enable_leds: enable
+  
+- platform: tplink
+  host: !secret ipradiador
+  name: "Radiador"
+  enable_leds: false

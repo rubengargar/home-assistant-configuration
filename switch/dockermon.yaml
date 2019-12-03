@@ -1,0 +1,96 @@
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Bazarr
+  name: Bazarr
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Beets
+  name: Beets
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/calibre-web
+  name: calibre-web
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Dasher
+  name: Dasher
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Grafana
+  name: Grafana
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/heimdall
+  name: heimdall
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Home_Assistant
+  name: Home_Assistant
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Jackett
+  name: Jackett
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Lidarr
+  name: Lidarr
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/mqtt
+  name: mqtt
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/NodeRed
+  name: NodeRed
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Ombi
+  name: Ombi
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Organizr
+  name: Organizr
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Radarr
+  name: Radarr
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/Sonarr
+  name: Sonarr
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+- platform: rest
+  resource: http://192.168.0.12:8126/container/watchtower
+  name: watchtower
+  body_on: '{"state": "start"}'
+  body_off: '{"state": "stop"}'
+  is_on_template: '{{ value_json is not none and value_json.state == "running" }}'

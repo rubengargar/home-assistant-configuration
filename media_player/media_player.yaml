@@ -1,0 +1,19 @@
+- platform: plex
+  entity_namespace: 'plex'
+  include_non_clients: true
+  scan_interval: 5
+  show_all_controls: true
+  use_custom_entity_ids: true
+  use_episode_art: true
+
+- platform: spotify
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+  # aliases:
+  #     abc123def456: 'Living Room'
+  #     9183abas000: 'Bed Room'
+
+
+# - platform: xboxone
+#   device: !secret xbox_liveid
+#   name: Living Room Xbox One

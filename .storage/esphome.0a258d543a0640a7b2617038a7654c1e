@@ -1,0 +1,90 @@
+{
+    "data": {
+        "binary_sensor": [
+            {
+                "device_class": "connectivity",
+                "is_status_binary_sensor": true,
+                "key": 1121497825,
+                "name": "Califooder",
+                "object_id": "califooder",
+                "unique_id": "califoodbinary_sensorcalifooder"
+            }
+        ],
+        "device_info": {
+            "compilation_time": "Nov 28 2019, 21:28:33",
+            "esphome_version": "1.14.3",
+            "has_deep_sleep": false,
+            "mac_address": "BC:DD:C2:2A:02:5A",
+            "model": "PLATFORMIO_NODEMCUV2",
+            "name": "califood",
+            "uses_password": true
+        },
+        "sensor": [
+            {
+                "accuracy_decimals": 0,
+                "force_update": false,
+                "icon": "mdi:timer",
+                "key": 586651227,
+                "name": "Califood System Uptime",
+                "object_id": "califood_system_uptime",
+                "unique_id": "bcddc22a025a-uptime",
+                "unit_of_measurement": "s"
+            },
+            {
+                "accuracy_decimals": 0,
+                "force_update": false,
+                "icon": "mdi:wifi",
+                "key": 3030220223,
+                "name": "Califood WiFi Signal",
+                "object_id": "califood_wifi_signal",
+                "unique_id": "bcddc22a025a-wifisignal",
+                "unit_of_measurement": "dB"
+            },
+            {
+                "accuracy_decimals": 2,
+                "force_update": false,
+                "icon": "mdi:arrow-expand-vertical",
+                "key": 4166149328,
+                "name": "Porcentaje pienso %",
+                "object_id": "porcentaje_pienso_",
+                "unique_id": "califoodsensorporcentaje_pienso_",
+                "unit_of_measurement": "%"
+            },
+            {
+                "accuracy_decimals": 2,
+                "force_update": false,
+                "icon": "mdi:arrow-expand-vertical",
+                "key": 381368662,
+                "name": "Cat Food Remaining ",
+                "object_id": "cat_food_remaining_",
+                "unique_id": "califoodsensorcat_food_remaining_",
+                "unit_of_measurement": "cm"
+            }
+        ],
+        "services": [
+            {
+                "args": [
+                    {
+                        "name": "level",
+                        "type_": 2
+                    }
+                ],
+                "key": 2387861054,
+                "name": "control_servo"
+            }
+        ],
+        "switch": [
+            {
+                "assumed_state": false,
+                "icon": "mdi:restart",
+                "key": 1179473210,
+                "name": "Restart CatFeeder",
+                "object_id": "restart_catfeeder",
+                "unique_id": "califoodswitchrestart_catfeeder"
+            }
+        ],
+        "text_sensor": []
+    },
+    "key": "esphome.0a258d543a0640a7b2617038a7654c1e",
+    "version": 1
+}

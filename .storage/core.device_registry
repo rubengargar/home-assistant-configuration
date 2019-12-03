@@ -1,0 +1,193 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": "0872f78b26394696b33148abc0f838df",
+                "config_entries": [
+                    "f194fb33a06f43ca946f1cad67588a84"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c"
+                    ]
+                ],
+                "id": "dccff114d5f74d45bf9e234fcbc2a081",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:upnp-InternetGatewayDevice-1_0-b42a0efbfe0c"
+                    ]
+                ],
+                "manufacturer": "Technicolor",
+                "model": "TC7230",
+                "name": "Technicolor TC7230",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "c35faeb8b9db4285a1d022ea9827f518",
+                "config_entries": [
+                    "0a258d543a0640a7b2617038a7654c1e"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "bc:dd:c2:2a:02:5a"
+                    ]
+                ],
+                "id": "c39cd02768fc44d2a1e64907988effbf",
+                "identifiers": [],
+                "manufacturer": "espressif",
+                "model": "PLATFORMIO_NODEMCUV2",
+                "name": "califood",
+                "name_by_user": null,
+                "sw_version": "1.14.3 (Nov 28 2019, 21:28:33)",
+                "via_device_id": null
+            },
+            {
+                "area_id": "c35faeb8b9db4285a1d022ea9827f518",
+                "config_entries": [
+                    "c89d499c25554491a91a45d596ed9bfd"
+                ],
+                "connections": [],
+                "id": "bf4503d06b7045cb9cacf91b63a62045",
+                "identifiers": [
+                    [
+                        "alexa_media",
+                        "G0911W0894262WDT"
+                    ]
+                ],
+                "manufacturer": "Amazon",
+                "model": "ECHO A1RABVCI4QCIKC",
+                "name": "Echo Dot de Ruben",
+                "name_by_user": null,
+                "sw_version": "3389727876",
+                "via_device_id": "bf4503d06b7045cb9cacf91b63a62045"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "c89d499c25554491a91a45d596ed9bfd"
+                ],
+                "connections": [],
+                "id": "6f3185842b57459188cfe666df04c803",
+                "identifiers": [
+                    [
+                        "alexa_media",
+                        "ONEPLUSA5010930FA29F369EDE09"
+                    ]
+                ],
+                "manufacturer": "Amazon",
+                "model": "AMAZONMOBILEMUSIC_ANDROID A1DL2DVDQVK3Q",
+                "name": "Ruben's Alexa Apps",
+                "name_by_user": null,
+                "sw_version": "315190410",
+                "via_device_id": "6f3185842b57459188cfe666df04c803"
+            },
+            {
+                "area_id": "0872f78b26394696b33148abc0f838df",
+                "config_entries": [
+                    "c89d499c25554491a91a45d596ed9bfd"
+                ],
+                "connections": [],
+                "id": "95358c32a5964b3a9a12ff5375aeb441",
+                "identifiers": [
+                    [
+                        "alexa_media",
+                        "G2A0WK04841704E3"
+                    ]
+                ],
+                "manufacturer": "Amazon",
+                "model": "ECHO A18O6U1UQFJ0XK",
+                "name": "Echo Plus  de Ruben",
+                "name_by_user": null,
+                "sw_version": "2919948420",
+                "via_device_id": "95358c32a5964b3a9a12ff5375aeb441"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "c89d499c25554491a91a45d596ed9bfd"
+                ],
+                "connections": [],
+                "id": "d2a99312d06c482eaea39d2c958e93a1",
+                "identifiers": [
+                    [
+                        "alexa_media",
+                        "fe19975813e24ff29d4b7e4cd3e2220c"
+                    ]
+                ],
+                "manufacturer": "Amazon",
+                "model": "VOX A2TF17PFR55MTB",
+                "name": "This Device",
+                "name_by_user": null,
+                "sw_version": "130050002",
+                "via_device_id": "d2a99312d06c482eaea39d2c958e93a1"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "c89d499c25554491a91a45d596ed9bfd"
+                ],
+                "connections": [],
+                "id": "9ec329c278914e58ab964cd48ce9c551",
+                "identifiers": [
+                    [
+                        "alexa_media",
+                        "50ff17a93591404e94a922cee7dcf441"
+                    ]
+                ],
+                "manufacturer": "Amazon",
+                "model": "UNKNOWN A3H674413M2EKB",
+                "name": "Ruben's echosim_BETA",
+                "name_by_user": null,
+                "sw_version": "0",
+                "via_device_id": "9ec329c278914e58ab964cd48ce9c551"
+            },
+            {
+                "area_id": "0872f78b26394696b33148abc0f838df",
+                "config_entries": [
+                    "30307933821c4bc3a747460a8f549a6f"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "50:c7:bf:bd:91:95"
+                    ]
+                ],
+                "id": "b857632aadde4aefb39d5103df682054",
+                "identifiers": [],
+                "manufacturer": "TP-Link",
+                "model": "HS110(EU)",
+                "name": "Radiador",
+                "name_by_user": null,
+                "sw_version": "1.2.5 Build 171213 Rel.101523",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "e85460086ab84b6da3d29e0d1dd3aefc"
+                ],
+                "connections": [],
+                "id": "e6b5e7cc68044b44ac1453ba6d59e945",
+                "identifiers": [
+                    [
+                        "garbage_collection",
+                        "f0c5c999-bbbf-4457-a4fc-5c189358c5bc"
+                    ]
+                ],
+                "manufacturer": "Garbage Collection",
+                "model": null,
+                "name": "Plastico",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

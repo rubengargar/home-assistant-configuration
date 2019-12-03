@@ -1,0 +1,9 @@
+#Actualizaciones telegram_bot
+- alias: 'Brecha de seguridad'
+  trigger:
+    platform: haveibeenpwned
+    entity_id: breach
+  action:
+    service: notify.Casacoru_bot
+    data:
+      message: "Tu correo ha sido vulnerado. Consulta HaveIbeenpwned"

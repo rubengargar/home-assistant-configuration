@@ -1,0 +1,10 @@
+#Actualizaciones telegram_bot
+- alias: 'Actualización Disponible'
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.Casacoru_bot
+    data:
+      message: "\U0001F514 Ha salido una nueva actualización ({{ states.updater.updater.state }}) del HomeAssistant"

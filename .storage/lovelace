@@ -1,0 +1,1599 @@
+{
+    "data": {
+        "config": {
+            "resources": [
+                {
+                    "type": "module",
+                    "url": "/local/simple-thermostat.js?v=1"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/calendar-card/calendar-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/mini-graph-card/mini-graph-card-bundle.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/podcast-card/podcast-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/rgb-light-card/card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/spotify-card/spotify-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/upcoming-media-card/upcoming-media-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/bignumber-card/bignumber-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/circle-sensor-card/circle-sensor-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/compact-custom-header/compact-custom-header.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/home-card/home-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/light-entity-card/light-entity-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/mini-media-player/mini-media-player-bundle.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/search-card/search-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/search-card/search-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/simple-weather-card/simple-weather-card-bundle.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/community_plugin/weather-card/weather-card.js"
+                }
+            ],
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        "sun.sun"
+                    ],
+                    "cards": [
+                        {
+                            "details": true,
+                            "entity": "weather.casa",
+                            "name": "Casa",
+                            "type": "custom:weather-card"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "columns": 5,
+                                    "entities": [
+                                        {
+                                            "entity": "device_tracker.00_0a_f5_39_f5_c8"
+                                        },
+                                        {
+                                            "entity": "device_tracker.rubs"
+                                        },
+                                        {
+                                            "entity": "device_tracker.begona"
+                                        },
+                                        {
+                                            "entity": "device_tracker.lucas"
+                                        }
+                                    ],
+                                    "type": "glance"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "group.iboolean_salida_casa"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                }
+                            ],
+                            "title": "Presencia",
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "sensor.temperature_158d0001a1f96b"
+                                    ],
+                                    "font_size": 75,
+                                    "hour24": true,
+                                    "hours_to_show": 24,
+                                    "line_color": "#5275ce",
+                                    "line_width": 8,
+                                    "lower_bound": 10,
+                                    "name": "Sal\u00f3n",
+                                    "show": {
+                                        "labels": false
+                                    },
+                                    "type": "custom:mini-graph-card",
+                                    "upper_bound": 35
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.temperature_158d0001b8cb19"
+                                    ],
+                                    "font_size": 75,
+                                    "hour24": true,
+                                    "hours_to_show": 24,
+                                    "line_color": "#5275ce",
+                                    "line_width": 8,
+                                    "lower_bound": 10,
+                                    "name": "Dormitorio",
+                                    "show": {
+                                        "labels": false
+                                    },
+                                    "type": "custom:mini-graph-card",
+                                    "upper_bound": 35
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.temperature"
+                                    ],
+                                    "font_size": 75,
+                                    "hour24": true,
+                                    "hours_to_show": 24,
+                                    "line_color": "#5275ce",
+                                    "line_width": 8,
+                                    "lower_bound": 10,
+                                    "name": "Estudio",
+                                    "show": {
+                                        "labels": false
+                                    },
+                                    "type": "custom:mini-graph-card",
+                                    "upper_bound": 35
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "dateBottomFormat": "ddd",
+                            "dateTopFormat": "DD",
+                            "entities": [
+                                {
+                                    "entity": "calendar.z_aut_termo",
+                                    "name": "z_Aut_Termo"
+                                },
+                                {
+                                    "entity": "calendar.z_aut_calefaccion",
+                                    "name": "z_Aut_Calefaccion"
+                                }
+                            ],
+                            "eventsLimit": "5",
+                            "hideHeader": false,
+                            "hidePastEvents": true,
+                            "hideTime": false,
+                            "highlightToday": true,
+                            "ignoreEventsByLocationExpression": "",
+                            "ignoreEventsExpression": "",
+                            "numberOfDays": "7",
+                            "progressBar": true,
+                            "showEventOrigin": false,
+                            "showLocation": false,
+                            "showLocationIcon": true,
+                            "showMultiDay": false,
+                            "startFromToday": true,
+                            "timeFormat": "HH:mma",
+                            "title": "Calendario",
+                            "type": "custom:calendar-card"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "aspect_ratio": "58%",
+                                    "camera_image": "camera.ffmpeg",
+                                    "entity": "camera.ffmpeg",
+                                    "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
+                                    "name": "Salida",
+                                    "show_state": false,
+                                    "type": "picture-entity"
+                                },
+                                {
+                                    "aspect_ratio": "58%",
+                                    "camera_image": "camera.ffmpeg",
+                                    "entity": "camera.ffmpeg_2",
+                                    "image": "https://www.home-assistant.io/images/merchandise/shirt-frontpage.png",
+                                    "name": "Centro",
+                                    "show_state": false,
+                                    "type": "picture-entity"
+                                }
+                            ],
+                            "title": "C\u00e1maras Coru\u00f1a",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.porcentaje_pienso",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "Pienso restante",
+                                    "theme": "Backend-selected",
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.califooder"
+                                        },
+                                        {
+                                            "entity": "script.57658975357"
+                                        },
+                                        {
+                                            "entity": "sensor.cats_fed"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                }
+                            ],
+                            "title": "Comedero Cali",
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": null,
+                    "cards": [
+                        {
+                            "entity": "media_player.spotify",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.echo_dot_de_ruben",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.living_room_xbox_one",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "sensor.recently_added_tv",
+                            "hide_empty": true,
+                            "image_style": "fanart",
+                            "text_shadows": false,
+                            "title": "Recently Downloaded",
+                            "type": "custom:upcoming-media-card"
+                        },
+                        {
+                            "entity": "sensor.sonarr_upcoming_media",
+                            "hide_empty": true,
+                            "image_style": "fanart",
+                            "text_shadows": false,
+                            "title": "Upcoming TV",
+                            "type": "custom:upcoming-media-card"
+                        },
+                        {
+                            "custom_player": true,
+                            "default_target": "media_player.office_home",
+                            "entity": "sensor.pocketcasts",
+                            "name": "Ian's Podcasts",
+                            "show_player": true,
+                            "type": "custom:podcast-card"
+                        },
+                        {
+                            "entity": "media_player.echo_plus_de_ruben",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "sensor.radarr_upcoming_media",
+                            "hide_empty": true,
+                            "image_style": "fanart",
+                            "text_shadows": false,
+                            "title": "Upcoming Movies",
+                            "type": "custom:upcoming-media-card"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "media_player.echo_plus_de_ruben",
+                                    "type": "media-control"
+                                },
+                                {
+                                    "entity": "media_player.echo_dot_de_ruben",
+                                    "type": "media-control"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "media_player.echo_plus_de_ruben",
+                                    "hide": {
+                                        "volume": true
+                                    },
+                                    "info": "short",
+                                    "type": "custom:mini-media-player"
+                                },
+                                {
+                                    "entity": "media_player.echo_dot_de_ruben",
+                                    "hide": {
+                                        "volume": true
+                                    },
+                                    "info": "short",
+                                    "type": "custom:mini-media-player"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "artwork": "cover",
+                            "entity": "media_player.echo_plus_de_ruben",
+                            "icon": "mdi:spotify",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:cat",
+                                        "id": "spotify:user:spotify:playlist:37i9dQZF1DZ06evO2O09Hg",
+                                        "type": "playlist"
+                                    }
+                                ],
+                                "columns": 4
+                            },
+                            "type": "custom:mini-media-player"
+                        }
+                    ],
+                    "icon": "mdi:television",
+                    "title": "Multimedia"
+                },
+                {
+                    "badges": null,
+                    "cards": [
+                        {
+                            "details": true,
+                            "entity": "weather.casa",
+                            "name": "Casa",
+                            "type": "custom:weather-card"
+                        }
+                    ],
+                    "icon": "mdi:weather-sunset",
+                    "title": "Clima"
+                },
+                {
+                    "badges": null,
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "climate.calefaccion",
+                                    "sensors": [
+                                        {
+                                            "entity": "sensor.radiador_total_energy_kwh",
+                                            "name": "Energy today"
+                                        },
+                                        {
+                                            "attribute": "min_temp",
+                                            "hide": {
+                                                "away": false,
+                                                "mode": false
+                                            },
+                                            "name": "Min temp"
+                                        }
+                                    ],
+                                    "step_size": 1,
+                                    "type": "custom:simple-thermostat"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "input_number.temp_calefa"
+                                                },
+                                                {
+                                                    "entity": "input_number.temp_calefa_night"
+                                                },
+                                                {
+                                                    "entity": "sensor.radiador_today_kwh"
+                                                },
+                                                {
+                                                    "entity": "switch.radiador"
+                                                }
+                                            ],
+                                            "type": "entities"
+                                        },
+                                        {
+                                            "entity": "timer.calefaccion",
+                                            "icon": "mdi:timer",
+                                            "name": "Apagar en 30'",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": ""
+                                            },
+                                            "type": "entity-button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.moho_dormitorio",
+                                    "icon": "mdi:mushroom",
+                                    "name": "Dormitorio"
+                                },
+                                {
+                                    "entity": "sensor.moho_salon",
+                                    "icon": "mdi:mushroom",
+                                    "name": "Sal\u00f3n"
+                                },
+                                {
+                                    "entity": "sensor.moho_camaras",
+                                    "icon": "mdi:mushroom",
+                                    "name": "Armario c\u00e1maras"
+                                }
+                            ],
+                            "title": "Probabilidad de moho",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:hot-tub",
+                    "title": "ACS"
+                },
+                {
+                    "badges": null,
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.speedtest_download"
+                                },
+                                {
+                                    "entity": "sensor.speedtest_upload"
+                                }
+                            ],
+                            "hours_to_show": 168,
+                            "icon": "mdi:server",
+                            "name": "Internet",
+                            "points_per_hour": 0.25,
+                            "type": "custom:mini-graph-card"
+                        },
+                        {
+                            "align_icon": "left",
+                            "align_state": "center",
+                            "entities": [
+                                "sensor.speedtest_ping"
+                            ],
+                            "hours_to_show": 168,
+                            "points_per_hour": 0.1,
+                            "show": {
+                                "fill": false
+                            },
+                            "type": "custom:mini-graph-card"
+                        },
+                        {
+                            "columns": 2,
+                            "entities": [
+                                {
+                                    "entity": "switch.uxia_pc",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.Uxia_Pc"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.strelka",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.Strelka"
+                                    }
+                                }
+                            ],
+                            "show_state": false,
+                            "title": "Wake On LAN",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.bazarr",
+                                    "icon": "mdi:subtitles"
+                                },
+                                {
+                                    "entity": "switch.beets",
+                                    "icon": "mdi:music-circle-outline"
+                                },
+                                {
+                                    "entity": "switch.calibre_web",
+                                    "icon": "mdi:book-open-page-variant",
+                                    "name": "Calibre"
+                                },
+                                {
+                                    "entity": "switch.dasher",
+                                    "icon": "mdi:amazon"
+                                },
+                                {
+                                    "entity": "switch.grafana",
+                                    "icon": "mdi:graphql"
+                                },
+                                {
+                                    "entity": "switch.heimdall",
+                                    "icon": "mdi:home-outline",
+                                    "name": "Heimdall"
+                                },
+                                {
+                                    "action": "switch.off",
+                                    "entity": "switch.home_assistant",
+                                    "icon": "mdi:home-assistant"
+                                },
+                                {
+                                    "entity": "switch.jackett",
+                                    "icon": "mdi:download-network"
+                                },
+                                {
+                                    "entity": "switch.lidarr",
+                                    "icon": "mdi:playlist-music"
+                                },
+                                {
+                                    "entity": "switch.nodered",
+                                    "icon": "mdi:resistor-nodes"
+                                },
+                                {
+                                    "entity": "switch.ombi",
+                                    "icon": "mdi:cloud-search"
+                                },
+                                {
+                                    "entity": "switch.organizr",
+                                    "icon": "mdi:home-circle"
+                                },
+                                {
+                                    "entity": "switch.radarr",
+                                    "icon": "mdi:television-box"
+                                },
+                                {
+                                    "entity": "switch.sonarr",
+                                    "icon": "mdi:movie"
+                                },
+                                {
+                                    "entity": "switch.watchtower",
+                                    "icon": "mdi:database-refresh",
+                                    "name": "Watchtower"
+                                }
+                            ],
+                            "show_state": false,
+                            "title": "Docker",
+                            "type": "glance"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.pi_hole_ads_blocked_today",
+                                    "icon": "mdi:ladybug",
+                                    "name": "Ads bloqueados hoy",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_unique_clients",
+                                    "name": "Clientes DNS",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_domains_blocked",
+                                    "name": "Dominios",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "name": "Pi-hole",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                "sensor.califood_wifi_signal"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Calidad Wifi",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.synology_dsm_network_up"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_network_down"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_memory_usage_real"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_cpu_load_total"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_volume_used_volume_1"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_volume_used_volume_2"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_volume_used_volume_3"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_volume_used_volume_4"
+                                }
+                            ],
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:ethernet",
+                    "title": "Internet"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "camera.ip_webcam",
+                            "name": "printcam",
+                            "show_state": false,
+                            "tap_action": "more-info",
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entity": "sensor.octoprint_job_percentage",
+                            "from": "left",
+                            "max": 100,
+                            "min": 0,
+                            "scale": "30px",
+                            "severity": [
+                                {
+                                    "style": "var(--label-badge-red)",
+                                    "value": 20
+                                },
+                                {
+                                    "style": "var(--label-badge-yellow)",
+                                    "value": 40
+                                },
+                                {
+                                    "style": "var(--label-badge-green)",
+                                    "value": 70
+                                }
+                            ],
+                            "title": "Current Job Completion Status",
+                            "type": "custom:bignumber-card"
+                        },
+                        {
+                            "column_width": "calc(100% / 3)",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.octoprint_printing",
+                                    "icon": "mdi:printer-wireless",
+                                    "name": "Printing Status"
+                                },
+                                {
+                                    "entity": "binary_sensor.octoprint_printing_error",
+                                    "icon": "mdi:printer-alert",
+                                    "name": "Error State"
+                                },
+                                {
+                                    "entity": "sensor.octoprint_current_state",
+                                    "name": "Current Status"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "glance"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.bed",
+                                    "max": 150,
+                                    "min": 0,
+                                    "severity": {
+                                        "amber": 0,
+                                        "green": 60,
+                                        "red": 120
+                                    },
+                                    "title": "Bed Temp",
+                                    "type": "gauge",
+                                    "unit_of_measurement": "\u00b0C"
+                                },
+                                {
+                                    "entity": "sensor.hotend",
+                                    "max": 260,
+                                    "min": 0,
+                                    "severity": {
+                                        "amber": 0,
+                                        "green": 200,
+                                        "red": 225
+                                    },
+                                    "title": "Hot End Temp",
+                                    "type": "gauge",
+                                    "unit_of_measurement": "\u00b0C"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.octoprint_target_bed_temp",
+                                    "max": 150,
+                                    "min": 0,
+                                    "severity": {
+                                        "amber": 0,
+                                        "green": 59,
+                                        "red": 120
+                                    },
+                                    "title": "Bed Target",
+                                    "type": "gauge",
+                                    "unit_of_measurement": "\u00b0C"
+                                },
+                                {
+                                    "entity": "sensor.octoprint_target_tool0_temp",
+                                    "max": 260,
+                                    "min": 0,
+                                    "severity": {
+                                        "amber": 0,
+                                        "green": 199,
+                                        "red": 225
+                                    },
+                                    "title": "Hot End Target",
+                                    "type": "gauge",
+                                    "unit_of_measurement": "\u00b0C"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.octoprint_time_elapsed",
+                                    "graph": "none",
+                                    "name": "Elapsed",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.octoprint_time_remaining",
+                                    "graph": "none",
+                                    "name": "Remaining",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:printer-3d",
+                    "panel": false,
+                    "title": "Impresora"
+                },
+                {
+                    "badges": [
+                        "group.all_lights"
+                    ],
+                    "cards": [
+                        {
+                            "entity": "sensor.daily_energy_consumption_offpeak",
+                            "graph": "line",
+                            "type": "sensor"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.flexo"
+                                },
+                                {
+                                    "colors": [
+                                        {
+                                            "brightness": 220,
+                                            "rgb_color": [
+                                                255,
+                                                127,
+                                                255
+                                            ],
+                                            "transition": 1
+                                        },
+                                        {
+                                            "hs_color": [
+                                                60,
+                                                30
+                                            ],
+                                            "icon_color": "#fff8b0"
+                                        }
+                                    ],
+                                    "entity": "light.flexo",
+                                    "type": "custom:rgb-light-card"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.luz"
+                                },
+                                {
+                                    "colors": [
+                                        {
+                                            "brightness": 220,
+                                            "rgb_color": [
+                                                255,
+                                                127,
+                                                255
+                                            ],
+                                            "transition": 1
+                                        },
+                                        {
+                                            "hs_color": [
+                                                60,
+                                                30
+                                            ],
+                                            "icon_color": "#fff8b0"
+                                        }
+                                    ],
+                                    "entity": "light.luz",
+                                    "type": "custom:rgb-light-card"
+                                }
+                            ],
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:lightbulb",
+                    "title": "Luces"
+                },
+                {
+                    "badges": null,
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.sensor_temperatura_habitacion",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "Bater\u00eda sensor habitaci\u00f3n",
+                                    "severity": {
+                                        "green": 70,
+                                        "red": 10,
+                                        "yellow": 30
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.sensor_temperatura_salon",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "Bater\u00eda sensor sal\u00f3n",
+                                    "severity": {
+                                        "green": 70,
+                                        "red": 10,
+                                        "yellow": 30
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:flash-circle",
+                    "title": "Electricidad"
+                },
+                {
+                    "badges": null,
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "elements": [
+                                        {
+                                            "entity": "vacuum.comemierda",
+                                            "icon": "mdi:bell-ring",
+                                            "service": "vacuum.locate",
+                                            "style": {
+                                                "color": "#3090C7",
+                                                "left": "80%",
+                                                "top": "90%"
+                                            },
+                                            "tap_action": "call-service",
+                                            "type": "icon"
+                                        },
+                                        {
+                                            "entity": "vacuum.comemierda",
+                                            "icon": "mdi:crosshairs",
+                                            "service": "vacuum.clean_spot",
+                                            "style": {
+                                                "color": "#3090C7",
+                                                "left": "65%",
+                                                "top": "90%"
+                                            },
+                                            "tap_action": "call-service",
+                                            "type": "icon"
+                                        },
+                                        {
+                                            "entity": "vacuum.comemierda",
+                                            "icon": "mdi:home",
+                                            "service": "vacuum.return_to_base",
+                                            "style": {
+                                                "color": "#3090C7",
+                                                "left": "50%",
+                                                "top": "90%"
+                                            },
+                                            "tap_action": "call-service",
+                                            "type": "icon"
+                                        },
+                                        {
+                                            "entity": "vacuum.comemierda",
+                                            "icon": "mdi:stop",
+                                            "service": "vacuum.stop",
+                                            "style": {
+                                                "color": "#3090C7",
+                                                "left": "35%",
+                                                "top": "90%"
+                                            },
+                                            "tap_action": "call-service",
+                                            "type": "icon"
+                                        },
+                                        {
+                                            "entity": "vacuum.comemierda",
+                                            "icon": "mdi:play",
+                                            "service": "vacuum.start",
+                                            "style": {
+                                                "color": "#3090C7",
+                                                "left": "20%",
+                                                "top": "90%"
+                                            },
+                                            "tap_action": "call-service",
+                                            "type": "icon"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_operation",
+                                            "style": {
+                                                "background-color": "#3090C7",
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-radius": "6px",
+                                                "color": "rgb(255, 255, 255)",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "90%",
+                                                "font-weight": "bold",
+                                                "left": "1%",
+                                                "pointer-events": "none",
+                                                "top": "10%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_accessories",
+                                            "style": {
+                                                "background-color": "#3090C7",
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-radius": "6px",
+                                                "color": "rgb(255, 255, 255)",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "90%",
+                                                "font-weight": "bold",
+                                                "pointer-events": "none",
+                                                "right": "1%",
+                                                "top": "10%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "vacuum.comemierda",
+                                            "style": {
+                                                "background-color": "#cccccc",
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-radius": "6px",
+                                                "color": "rgb(255, 255, 255)",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "150%",
+                                                "font-weight": "bold",
+                                                "right": "38%",
+                                                "top": "14%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "tap_action": "more-info",
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_cleanmainbrush",
+                                            "style": {
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-right-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "76%",
+                                                "font-weight": "bold",
+                                                "pointer-events": "none",
+                                                "right": "1%",
+                                                "top": "35%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_cleansidebrush",
+                                            "style": {
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-right-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "76%",
+                                                "font-weight": "bold",
+                                                "pointer-events": "none",
+                                                "right": "1%",
+                                                "top": "45%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_cleanfilter",
+                                            "style": {
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-right-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "76%",
+                                                "font-weight": "bold",
+                                                "opacity": 0.8,
+                                                "pointer-events": "none",
+                                                "right": "1%",
+                                                "top": "55%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_sensordirtyleft",
+                                            "style": {
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-right-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "76%",
+                                                "font-weight": "bold",
+                                                "pointer-events": "none",
+                                                "right": "1%",
+                                                "top": "65%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_status",
+                                            "style": {
+                                                "border-color": "#3090C7",
+                                                "border-left-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "80%",
+                                                "font-weight": "bold",
+                                                "left": "1%",
+                                                "pointer-events": "none",
+                                                "top": "40%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_battery",
+                                            "style": {
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-left-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "80%",
+                                                "font-weight": "bold",
+                                                "left": "1%",
+                                                "pointer-events": "none",
+                                                "top": "50%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_fan_speed",
+                                            "style": {
+                                                "border-color": "rgb(34, 154, 210)",
+                                                "border-left-style": "solid",
+                                                "color": "#ffffff",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "80%",
+                                                "font-weight": "bold",
+                                                "left": "1%",
+                                                "pointer-events": "none",
+                                                "top": "60%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_cleaned_area",
+                                            "prefix": "Area:",
+                                            "style": {
+                                                "color": "#84a6ba",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "80%",
+                                                "font-weight": "bold",
+                                                "left": "31%",
+                                                "pointer-events": "none",
+                                                "top": "79%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.vacuum_cleaning_time",
+                                            "prefix": "Time:",
+                                            "style": {
+                                                "color": "#84a6ba",
+                                                "font-family": "Trebuchet MS",
+                                                "font-size": "80%",
+                                                "font-weight": "bold",
+                                                "left": "51%",
+                                                "pointer-events": "none",
+                                                "top": "79%",
+                                                "transform": "translate(0%,-50%)"
+                                            },
+                                            "type": "state-label"
+                                        }
+                                    ],
+                                    "image": "/local/vacuum1.jpg",
+                                    "title": "Vacuum",
+                                    "type": "picture-elements"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.vacuum_room"
+                                        }
+                                    ],
+                                    "type": "entities"
+                                },
+                                {
+                                    "columns": 2,
+                                    "entities": [
+                                        {
+                                            "entity": "input_boolean.disable_dustbin_notification",
+                                            "name": "Disable Notification"
+                                        },
+                                        {
+                                            "entity": "input_boolean.disable_daily_vacuum",
+                                            "name": "Disable Daily Cleanup"
+                                        }
+                                    ],
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "calibration_points": [
+                                {
+                                    "map": {
+                                        "x": 466,
+                                        "y": 1889
+                                    },
+                                    "vacuum": {
+                                        "x": 25500,
+                                        "y": 25500
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 730,
+                                        "y": 1625
+                                    },
+                                    "vacuum": {
+                                        "x": 26500,
+                                        "y": 26500
+                                    }
+                                },
+                                {
+                                    "map": {
+                                        "x": 466,
+                                        "y": 1625
+                                    },
+                                    "vacuum": {
+                                        "x": 25500,
+                                        "y": 26500
+                                    }
+                                }
+                            ],
+                            "entity": "vacuum.xiaomi_vacuum",
+                            "map_image": "/local/community/lovelace-xiaomi-vacuum-map-card/images.jpg",
+                            "type": "custom:xiaomi-vacuum-map-card",
+                            "zones": [
+                                [
+                                    [
+                                        25500,
+                                        25500,
+                                        26500,
+                                        26500
+                                    ]
+                                ],
+                                [
+                                    [
+                                        24215,
+                                        28125,
+                                        29465,
+                                        32175
+                                    ]
+                                ],
+                                [
+                                    [
+                                        24245,
+                                        25190,
+                                        27495,
+                                        27940
+                                    ],
+                                    [
+                                        27492,
+                                        26789,
+                                        28942,
+                                        27889
+                                    ]
+                                ],
+                                [
+                                    [
+                                        28972,
+                                        26715,
+                                        31072,
+                                        27915
+                                    ],
+                                    [
+                                        29457,
+                                        27903,
+                                        31107,
+                                        29203
+                                    ],
+                                    [
+                                        30198,
+                                        29215,
+                                        31498,
+                                        31215
+                                    ],
+                                    [
+                                        29461,
+                                        31228,
+                                        31511,
+                                        32478
+                                    ]
+                                ]
+                            ]
+                        }
+                    ],
+                    "icon": "mdi:robot-vacuum-variant",
+                    "title": "Aspiradora"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "columns": 7,
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.total_sensors",
+                                            "icon": "mdi:counter",
+                                            "name": "Sensors"
+                                        },
+                                        {
+                                            "entity": "sensor.total_automations",
+                                            "hold_action": {
+                                                "action": "call-service",
+                                                "service": "automation.reload"
+                                            },
+                                            "icon": "mdi:robot",
+                                            "name": "Auto"
+                                        },
+                                        {
+                                            "entity": "sensor.total_scripts",
+                                            "hold_action": {
+                                                "action": "call-service",
+                                                "service": "script.reload"
+                                            },
+                                            "icon": "mdi:script-text-outline",
+                                            "name": "Scripts"
+                                        },
+                                        {
+                                            "entity": "sensor.total_devicetrackers",
+                                            "icon": "mdi:cellphone-link",
+                                            "name": "Devices"
+                                        },
+                                        {
+                                            "entity": "sensor.total_switches",
+                                            "icon": "mdi:power-socket-us",
+                                            "name": "Switches"
+                                        },
+                                        {
+                                            "entity": "sensor.total_lights",
+                                            "icon": "mdi:lightbulb-on",
+                                            "name": "Lights",
+                                            "tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace/lights/"
+                                            }
+                                        }
+                                    ],
+                                    "show_name": true,
+                                    "type": "glance"
+                                },
+                                {
+                                    "columns": 4,
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.home_assistant_v2_db",
+                                            "hold_action": {
+                                                "action": "call-service",
+                                                "data": {
+                                                    "keep_days": 3,
+                                                    "repack": true
+                                                },
+                                                "service": "recorder.purge"
+                                            },
+                                            "icon": "mdi:database",
+                                            "name": "Database"
+                                        },
+                                        {
+                                            "entity": "sensor.home_assistant_log",
+                                            "hold_action": {
+                                                "action": "call-service",
+                                                "service": "system_log.clear"
+                                            },
+                                            "icon": "mdi:file-alert-outline",
+                                            "name": "Logfile",
+                                            "tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/dev-info"
+                                            }
+                                        },
+                                        {
+                                            "entity": "sensor.time_online",
+                                            "hold_action": {
+                                                "action": "call-service",
+                                                "service": "homeassistant.restart"
+                                            },
+                                            "name": "Uptime"
+                                        },
+                                        {
+                                            "entity": "sensor.installed_version",
+                                            "tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/hassio/dashboard"
+                                            }
+                                        },
+                                        {
+                                            "entity": "sensor.hacs",
+                                            "tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/hacs"
+                                            }
+                                        }
+                                    ],
+                                    "show_name": true,
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                "sensor.speedtest_download"
+                                            ],
+                                            "line_color": "lightblue",
+                                            "line_width": 8,
+                                            "name": "Download",
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "entities": [
+                                                "sensor.speedtest_upload"
+                                            ],
+                                            "line_color": "orange",
+                                            "line_width": 8,
+                                            "name": "Upload",
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "entities": [
+                                                "sensor.speedtest_ping"
+                                            ],
+                                            "line_color": "lightgreen",
+                                            "line_width": 8,
+                                            "name": "Ping",
+                                            "type": "custom:mini-graph-card"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.speedtest_download - sensor.speedtest_ping - sensor.speedtest_upload"
+                                    ],
+                                    "line_color": "#389638",
+                                    "name": "Speed test",
+                                    "show": {
+                                        "extrema": true,
+                                        "fill": false,
+                                        "icon": false
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.external_ip",
+                                                    "icon": "mdi:earth",
+                                                    "name": "External IP"
+                                                },
+                                                {
+                                                    "entity": "sensor.speedtest_last_updated",
+                                                    "name": "Last Speedtest",
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "input_boolean.toggle",
+                                                        "service_data": {
+                                                            "entity_id": "input_boolean.display_speedtest_graph"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "entity": "script.speedtest_update",
+                                                    "name": "Update Speedtest",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    }
+                                                }
+                                            ],
+                                            "show_header_toggle": false,
+                                            "type": "glance"
+                                        }
+                                    ],
+                                    "type": "vertical-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "icon": "mdi:home-assistant",
+                                    "name": "Home Assistant",
+                                    "type": "weblink",
+                                    "url": "https://www.home-assistant.io/"
+                                },
+                                {
+                                    "icon": "mdi:home-assistant",
+                                    "name": "Home Assistant Forums",
+                                    "type": "weblink",
+                                    "url": "https://community.home-assistant.io/"
+                                },
+                                {
+                                    "icon": "mdi:home-assistant",
+                                    "name": "Home Assistant Release Notes",
+                                    "type": "weblink",
+                                    "url": "https://github.com/home-assistant/home-assistant/releases"
+                                },
+                                {
+                                    "icon": "mdi:reddit",
+                                    "name": "Home Assistant Subreddit",
+                                    "type": "weblink",
+                                    "url": "https://www.reddit.com/r/homeassistant/new/"
+                                },
+                                {
+                                    "icon": "mdi:console-line",
+                                    "name": "Hass.io via Command Line",
+                                    "type": "weblink",
+                                    "url": "https://www.home-assistant.io/hassio/commandline/"
+                                },
+                                {
+                                    "icon": "mdi:alert-octagram",
+                                    "name": "Home Assistant Breaking Changes",
+                                    "type": "weblink",
+                                    "url": "https://hachanges.halfdecent.io/"
+                                },
+                                {
+                                    "icon": "mdi:alert-octagram",
+                                    "name": "Lovelace Changelog",
+                                    "type": "weblink",
+                                    "url": "https://www.home-assistant.io/lovelace/changelog/"
+                                },
+                                {
+                                    "style": {
+                                        "background": "#62717b",
+                                        "height": "1px",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "width": "80%"
+                                    },
+                                    "type": "divider"
+                                },
+                                {
+                                    "icon": "mdi:router-wireless",
+                                    "name": "Router",
+                                    "type": "weblink",
+                                    "url": "http://192.168.1.1/"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Links",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:settings",
+                    "path": "system",
+                    "title": "System"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.califooder"
+                                },
+                                {
+                                    "entity": "script.57658975357"
+                                },
+                                {
+                                    "entity": "input_number.servo_control"
+                                },
+                                {
+                                    "entity": "automation.alimentar_al_bicho"
+                                },
+                                {
+                                    "entity": "sensor.cats_fed"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "theme": "Backend-selected",
+                            "title": "Comedero Cali test",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:test-tube",
+                    "path": "test",
+                    "title": "Test"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

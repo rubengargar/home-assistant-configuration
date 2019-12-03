@@ -1,0 +1,12 @@
+android_ip_webcam:
+  - host: !secret Redmi3
+    sensors:
+      - battery_level
+      - light
+      - motion
+    switches:
+      - ffc
+      - focus
+      - night_vision
+      - torch
+      - video_recording

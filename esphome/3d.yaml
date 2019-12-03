@@ -1,0 +1,38 @@
+esphome:
+  name: 3d
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: "RWLAN26"
+  password: "20682926"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "3D Fallback Hotspot"
+    password: "RvTUCw9XL28U"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "misterwanda"
+
+ota:
+  password: "misterwanda"
+
+sensor:
+  - platform: uptime
+    name: "Fuente System Uptime"
+
+  - platform: wifi_signal
+    name: "Fuente WiFi Signal"
+    update_interval: 360s
+
+time:
+  - platform: homeassistant
+    ## Set your timezone
+    timezone: Europe/Madrid

@@ -1,0 +1,20 @@
+salida_vacaciones:
+ initial: off
+ name: Salida Vacaciones
+ icon: mdi:security-home
+
+dashtermo:
+  initial: off
+  name: Encender Termo desde el Baño
+  icon: mdi:water
+
+# alarmweekday_Calefaccion:
+#   name: Worday only
+#   icon: mdi:calendar
+#   initial: off
+# automode_Calefaccion:
+#   name: 'Set AUTO / OFF'
+#   initial: off
+# timeonoff_Calefaccion:
+#   name: 'Scheduled Calefaccion'
+#   initial: off

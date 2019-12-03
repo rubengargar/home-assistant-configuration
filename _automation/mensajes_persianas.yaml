@@ -1,0 +1,24 @@
+################################################################################
+######################### Mensajeria Lámparas Comedor ##########################
+################################################################################
+- alias: Mensaje cerrar persianas Telegram
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:15:00'
+  action:
+    service: notify.Casacoru_bot
+    data:
+      message: "\U0001F319 Cierra las persianas"
+
+- alias: Mensaje cerrar persianas Telegram
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:15:00'
+  action:
+    service: notify.nfandroidtv
+    data:
+      message: "Cierra las persianas"

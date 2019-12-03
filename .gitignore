@@ -1,0 +1,14 @@
+secrets.yaml
+alexa_media.nelbu.93@gmail.com.pickle
+.google.token
+.google_maps_location_sharing.cookies.gargartracker_gmail_com
+.uuid
+fitbit.conf
+google_calendars.yaml
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+home-assistant.log
+.storage/auth
+.storage/cloud
+.storage/auth_provider.homeassistant

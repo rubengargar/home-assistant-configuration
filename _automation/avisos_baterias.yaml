@@ -1,0 +1,12 @@
+################################################################################
+######################## Aviso baterias dispositivos ###########################
+################################################################################
+- alias: Batería sensor salón baja
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.temperature_158d0001b8cb19_battery_level
+    below: 5
+  action:
+    - service: notify.Casacoru_bot
+      data_template:
+        message: "\U0001F50B La batería del sensor de la habitación está al {{ states.sensor.temperature_158d0001b8cb19_battery_level}} %"

@@ -1,0 +1,23 @@
+termo_info:
+  name: ACS
+  icon: mdi:hot-tub
+  view: yes
+  entities:
+    - group.Termo
+    - group.Calefaccion
+    - history_graph.gr4
+
+Termo:
+    - switch.termo
+    - sensor.termo_amps
+    - sensor.termo_watts
+    - sensor.termo_kw
+    - sensor.termo_volts
+Calefaccion:
+    - sensor.temperature_158d0001b8cb19
+    - sensor.humidity_158d0001b8cb19
+    - switch.radiador
+    - sensor.radiador_amps
+    - sensor.radiador_watts
+    - sensor.radiador_kw
+    - sensor.radiador_volts

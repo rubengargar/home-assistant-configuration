@@ -1,0 +1,7 @@
+history_graph:
+  gr1:
+    name: Temperatura
+    entities:
+      - darksky_apparent_temperature
+    hours_to_show: 168
+    refresh: 60

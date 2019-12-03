@@ -1,0 +1,8 @@
+- name: Casacoru_bot
+  platform: telegram
+  chat_id: !secret tel_id
+
+- name: AndroidTV
+  platform: nfandroidtv
+  host: !secret Atv_host
+  transparency: "75%"

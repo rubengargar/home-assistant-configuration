@@ -1,0 +1,14 @@
+################################################################################
+########################### Grupos Pantalla SpeedTest ##########################
+################################################################################
+speedtest:
+  name: Velocidad de Internet
+  view: yes
+  icon: mdi:speedometer
+  entities:
+    - group.velocidad_de_internet
+
+Velocidad de Internet:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping

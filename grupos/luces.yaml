@@ -1,0 +1,9 @@
+Luces:
+  name: Luces
+  view: yes
+  icon: mdi:lightbulb
+  entities:
+    - group.Pasillo
+
+Pasillo:
+    - light.gateway_light_7811dcb070a8

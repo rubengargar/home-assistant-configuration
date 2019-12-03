@@ -1,0 +1,85 @@
+################################################################################
+################################# TP-Link ####### ################################
+################################################################################
+# - platform: template
+#   host: !secret iptermo
+#   name: Termo
+#   sensors:
+#     termo_amps:
+#       value_template: '{{ states.switch.termo.attributes["current"] | replace(" A", "") | float }}'
+#       unit_of_measurement: 'A'
+#     termo_watts:
+#       value_template: '{{ states.switch.termo.attributes["current_consumption"] | replace(" W", "") | float }}'
+#       unit_of_measurement: 'W'
+#     termo_kw:
+#       value_template: '{{ states.switch.termo.attributes["total_consumption"] | replace(" kW", "") | float }}'
+#       unit_of_measurement: 'kW'
+#     termo_volts:
+#       value_template: '{{ states.switch.termo.attributes["voltage"] | replace(" V", "") | float }}'
+#       unit_of_measurement: 'V'
+
+# - platform: template
+#   host: !secret ipradiador
+#   name: Radiador
+#   sensors:
+#     radiador_amps:
+#       value_template: '{{ states.switch.radiador.attributes["current"] | replace(" A", "") | float }}'
+#       unit_of_measurement: 'A'
+#     radiador_watts:
+#       value_template: '{{ states.switch.radiador.attributes["current_consumption"] | replace(" W", "") | float }}'
+#       unit_of_measurement: 'W'
+#     radiador_kw:
+#       value_template: '{{ states.switch.radiador.attributes["total_consumption"] | replace(" kW", "") | float }}'
+#       unit_of_measurement: 'kW'
+#     radiador_volts:
+#       value_template: '{{ states.switch.radiador.attributes["voltage"] | replace(" V", "") | float }}'
+#       unit_of_measurement: 'V'
+# - platform: template
+#   host: !secret ipradiador
+#   name: Radiador
+#   sensors:
+#     radiador_amps:
+#       friendly_name_template: "{{ states.switch.radiador.name}} Current"
+#       value_template: '{{ states.switch.radiador.attributes["current_a"] | float }}'
+#       unit_of_measurement: 'A'
+#     radiador_watts:
+#       friendly_name_template: "{{ states.switch.radiador.name}} Current Consumption"
+#       value_template: '{{ states.switch.radiador.attributes["current_power_w"] | float }}'
+#       unit_of_measurement: 'W'
+#     radiador_total_kwh:
+#       friendly_name_template: "{{ states.switch.radiador.name}} Total Consumption"
+#       value_template: '{{ states.switch.radiador.attributes["total_energy_kwh"] | float }}'
+#       unit_of_measurement: 'kWh'
+#     radiador_volts:
+#       friendly_name_template: "{{ states.switch.radiador.name}} Voltage"
+#       value_template: '{{ states.switch.radiador.attributes["voltage"] | float }}'
+#       unit_of_measurement: 'V'
+#     radiador_today_kwh:
+#       friendly_name_template: "{{ states.switch.radiador.name}} Today's Consumption"
+#       value_template: '{{ states.switch.radiador.attributes["today_energy_kwh"] | float }}'
+#       unit_of_measurement: 'kWh'
+
+# - platform: template
+#   host: !secret iptermo
+#   name: Termo
+#   sensors:
+#     termo_amps:
+#       friendly_name_template: "{{ states.switch.termo.name}} Current"
+#       value_template: '{{ states.switch.termo.attributes["current_a"] | float }}'
+#       unit_of_measurement: 'A'
+#     termo_watts:
+#       friendly_name_template: "{{ states.switch.termo.name}} Current Consumption"
+#       value_template: '{{ states.switch.termo.attributes["current_power_w"] | float }}'
+#       unit_of_measurement: 'W'
+#     termo_total_kwh:
+#       friendly_name_template: "{{ states.switch.termo.name}} Total Consumption"
+#       value_template: '{{ states.switch.termo.attributes["total_energy_kwh"] | float }}'
+#       unit_of_measurement: 'kWh'
+#     termo_volts:
+#       friendly_name_template: "{{ states.switch.termo.name}} Voltage"
+#       value_template: '{{ states.switch.termo.attributes["voltage"] | float }}'
+#       unit_of_measurement: 'V'
+#     termo_today_kwh:
+#       friendly_name_template: "{{ states.switch.termo.name}} Today's Consumption"
+#       value_template: '{{ states.switch.termo.attributes["today_energy_kwh"] | float }}'
+#       unit_of_measurement: 'kWh'
