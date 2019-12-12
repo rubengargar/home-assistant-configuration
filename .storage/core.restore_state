@@ -1,7 +1,115 @@
 {
     "data": [
         {
-            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "day": 13,
+                    "friendly_name": "\u00daltimo servicio",
+                    "has_date": true,
+                    "has_time": true,
+                    "hour": 0,
+                    "minute": 15,
+                    "month": 12,
+                    "second": 1,
+                    "timestamp": 1576192501.0,
+                    "year": 2019
+                },
+                "context": {
+                    "id": "2aaf1a8e10a2493383836dba7e707fb9",
+                    "parent_id": "63822f81e9ed4d789eef2f9c90da3226",
+                    "user_id": null
+                },
+                "entity_id": "input_datetime.last_time_food",
+                "last_changed": "2019-12-12T23:15:01.077728+00:00",
+                "last_updated": "2019-12-12T23:15:01.077728+00:00",
+                "state": "2019-12-13 00:15:01"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Comidas cali",
+                    "has_date": false,
+                    "has_time": true,
+                    "hour": 19,
+                    "minute": 15,
+                    "second": 0,
+                    "timestamp": 69300
+                },
+                "context": {
+                    "id": "e1cfcea002b04007b2c9b40bb77b1e2f",
+                    "parent_id": null,
+                    "user_id": "b923c8bf494f4f12a05fa32a2e2b03d5"
+                },
+                "entity_id": "input_datetime.everyday_food",
+                "last_changed": "2019-12-12T23:15:33.170411+00:00",
+                "last_updated": "2019-12-12T23:15:33.170411+00:00",
+                "state": "19:15:00"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "entity_picture": "/local/casa.jpg",
+                    "friendly_name": "Salida De Casa",
+                    "icon": "mdi:security-home"
+                },
+                "context": {
+                    "id": "4637fd86074545bf8d9f58d39be1dc20",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.salida_vacaciones",
+                "last_changed": "2019-12-12T21:48:34.936946+00:00",
+                "last_updated": "2019-12-12T21:48:34.936946+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Encender Termo desde el Ba\u00f1o",
+                    "icon": "mdi:water"
+                },
+                "context": {
+                    "id": "47f4013c839643929cb92c697572efb6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.dashtermo",
+                "last_changed": "2019-12-12T21:48:34.938429+00:00",
+                "last_updated": "2019-12-12T21:48:34.938429+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Tiempo giro",
+                    "initial": 5.0,
+                    "max": 20.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "3aea2a6e975d4b1b86f21a68f87bf38e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.servo_time",
+                "last_changed": "2019-12-12T21:48:34.939940+00:00",
+                "last_updated": "2019-12-12T21:48:34.939940+00:00",
+                "state": "5.0"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Rotaci\u00f3n servo",
@@ -13,74 +121,115 @@
                     "step": 1.0
                 },
                 "context": {
-                    "id": "be27702753aa4d62a0344265503940c0",
+                    "id": "309454a4a19748cf968cde279d68af27",
                     "parent_id": null,
-                    "user_id": "2f174d04fa98465ca7549adb03093ace"
+                    "user_id": "b923c8bf494f4f12a05fa32a2e2b03d5"
                 },
                 "entity_id": "input_number.servo_control",
-                "last_changed": "2019-12-03T15:16:32.071100+00:00",
-                "last_updated": "2019-12-03T15:16:32.071100+00:00",
-                "state": "50.0"
+                "last_changed": "2019-12-12T21:53:46.227608+00:00",
+                "last_updated": "2019-12-12T21:53:46.227608+00:00",
+                "state": "60.0"
             }
         },
         {
-            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
             "state": {
                 "attributes": {
-                    "entity_picture": "/local/casa.jpg",
-                    "friendly_name": "Salida De Casa",
-                    "icon": "mdi:security-home"
+                    "editable": true,
+                    "friendly_name": "Rub\u00e9n",
+                    "id": "d013fc4665dc46a0a1bc9b716ca0ec86",
+                    "source": "device_tracker.rubs",
+                    "user_id": "b923c8bf494f4f12a05fa32a2e2b03d5"
                 },
                 "context": {
-                    "id": "185ad838672341bd915856a83a8412d7",
+                    "id": "48aa13e84c4749b7bcfa7a39931f06f2",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "input_boolean.salida_vacaciones",
-                "last_changed": "2019-12-03T13:01:01.854455+00:00",
-                "last_updated": "2019-12-03T13:01:01.854455+00:00",
+                "entity_id": "person.ruben",
+                "last_changed": "2019-12-12T21:48:34.943147+00:00",
+                "last_updated": "2019-12-12T21:49:58.407947+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Speedtest Upload",
+                    "icon": "mdi:speedometer",
+                    "unit_of_measurement": "Mbit/s"
+                },
+                "context": {
+                    "id": "04db269b469840c0b4a32b5dbdf76dd7",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_upload",
+                "last_changed": "2019-12-12T22:48:50.846104+00:00",
+                "last_updated": "2019-12-12T22:48:50.846104+00:00",
+                "state": "29.62"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Speedtest Download",
+                    "icon": "mdi:speedometer",
+                    "unit_of_measurement": "Mbit/s"
+                },
+                "context": {
+                    "id": "37df238b5b4f4e6babe84fc95435fe6c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_download",
+                "last_changed": "2019-12-12T22:48:50.873287+00:00",
+                "last_updated": "2019-12-12T22:48:50.873287+00:00",
+                "state": "77.88"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Speedtest Ping",
+                    "icon": "mdi:speedometer",
+                    "unit_of_measurement": "ms"
+                },
+                "context": {
+                    "id": "4830f5f60a8640039bc72952a4ae4e3d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_ping",
+                "last_changed": "2019-12-12T22:48:50.898112+00:00",
+                "last_updated": "2019-12-12T22:48:50.898112+00:00",
+                "state": "42.537"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Notificaci\u00f3n pienso bajo",
+                    "id": "1575416595489",
+                    "last_triggered": "2019-12-12T21:10:44.978665+00:00"
+                },
+                "context": {
+                    "id": "91092f1d21ad4224a9b537cbefec3b5c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.notificacion_pienso_bajo",
+                "last_changed": "2019-12-12T22:05:46.585366+00:00",
+                "last_updated": "2019-12-12T22:05:46.585366+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-12-03T16:32:23.009005+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Encender Termo desde el Ba\u00f1o",
-                    "icon": "mdi:water"
-                },
-                "context": {
-                    "id": "e4d07222191f4ec0a2abc2a11018c565",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.dashtermo",
-                "last_changed": "2019-12-03T13:01:01.855102+00:00",
-                "last_updated": "2019-12-03T13:01:01.855102+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2019-12-03T16:32:23.009005+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Moho habitaci\u00f3n",
-                    "id": "1550330341212",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "8521391f3057449a8647ce812ff5aef0",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.moho_habitacion",
-                "last_changed": "2019-12-03T16:29:20.929435+00:00",
-                "last_updated": "2019-12-03T16:29:20.929435+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Moho habitaci\u00f3n",
@@ -88,49 +237,93 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "6c3bd3bebc694d94b33f6cb7fe352631",
+                    "id": "7518f31a4360429380fa3b532f6007d8",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.moho_habitacion",
+                "last_changed": "2019-12-12T22:05:46.591381+00:00",
+                "last_updated": "2019-12-12T22:05:46.591381+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Comida diaria",
+                    "id": "1575416595492",
+                    "last_triggered": "2019-12-12T23:15:01.134731+00:00"
+                },
+                "context": {
+                    "id": "2aaf1a8e10a2493383836dba7e707fb9",
+                    "parent_id": "63822f81e9ed4d789eef2f9c90da3226",
+                    "user_id": null
+                },
+                "entity_id": "automation.comida_diaria",
+                "last_changed": "2019-12-12T22:05:46.597945+00:00",
+                "last_updated": "2019-12-12T23:15:01.135833+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-12-12T23:35:05.011728+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Moho habitaci\u00f3n",
+                    "id": "1550330341212",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "955d8622c33d4884bde6ba5eb75c572a",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.moho_habitacion_2",
-                "last_changed": "2019-12-03T16:29:20.933174+00:00",
-                "last_updated": "2019-12-03T16:29:20.933174+00:00",
+                "last_changed": "2019-12-12T22:05:46.603965+00:00",
+                "last_updated": "2019-12-12T22:05:46.603965+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2019-12-03T16:32:23.009005+00:00",
+            "last_seen": "2019-12-12T21:47:32.917584+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Alimentar al bicho",
-                    "last_triggered": "2019-12-03T15:16:32.247048+00:00"
+                    "friendly_name": "Comidas cali",
+                    "has_date": false,
+                    "has_time": true,
+                    "hour": 0,
+                    "minute": 0,
+                    "second": 0,
+                    "timestamp": 0
                 },
                 "context": {
-                    "id": "7d445b93d555490e82d95465e76d92de",
+                    "id": "606f074d888b40048b70b315b03208b0",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.alimentar_al_bicho_2",
-                "last_changed": "2019-12-03T16:29:20.937545+00:00",
-                "last_updated": "2019-12-03T16:29:20.937545+00:00",
-                "state": "on"
+                "entity_id": "input_datetime.both_date_and_time",
+                "last_changed": "2019-12-12T17:18:38.540907+00:00",
+                "last_updated": "2019-12-12T17:18:38.540907+00:00",
+                "state": "00:00:00"
             }
         },
         {
-            "last_seen": "2019-11-29T00:38:37.037268+00:00",
+            "last_seen": "2019-12-12T22:05:46.449075+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Write Servo Value to ESP",
-                    "last_triggered": "2019-11-29T00:26:32.854648+00:00"
+                    "friendly_name": "New Automation",
+                    "id": "1576165018507",
+                    "last_triggered": "2019-12-12T21:51:04.124763+00:00"
                 },
                 "context": {
-                    "id": "d46906733a5d4eaf80a5b9d2f043747c",
+                    "id": "91ecb8909d8b460fa2204e1589dec980",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.write_servo_value_to_esp",
-                "last_changed": "2019-11-28T22:52:23.330685+00:00",
-                "last_updated": "2019-11-29T00:26:32.855269+00:00",
+                "entity_id": "automation.new_automation",
+                "last_changed": "2019-12-12T21:48:52.720652+00:00",
+                "last_updated": "2019-12-12T21:51:04.125857+00:00",
                 "state": "on"
             }
         }

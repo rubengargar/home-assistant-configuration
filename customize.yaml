@@ -7,6 +7,7 @@ input_number.servo_control:
   icon: mdi:rotate-3d-variant
 script.57658975357:
   icon: mdi:paw
+  can_cancel: false
 input_boolean.salida_vacaciones_dash:
   friendly_name: Salida De Casa Botón Dash
   icon: mdi:home
@@ -24,3 +25,5 @@ sensor.pressure_158d0001a1f96b:
   friendly_name: Presión salón
 device_tracker.00_0a_f5_39_f5_c8:
   friendly_name: xiaomi
+input_number.servo_time:
+  icon: mdi:timer

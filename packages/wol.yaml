@@ -1,0 +1,13 @@
+switch:
+  - platform: wake_on_lan
+    mac: !secret ux_pc
+    name: "Uxia PC"
+    host: !secret UxiaIP
+  - platform: wake_on_lan
+    mac: !secret rubs_pc
+    name: "Strelka"
+    host: !secret strelkaIP
+  - platform: wake_on_lan
+    mac: !secret dsm_mac1
+    name: "Arturito"
+    host: !secret dsm_host

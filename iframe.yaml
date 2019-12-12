@@ -14,18 +14,10 @@ plex:
   title: 'Plex'
   icon: mdi:plex
   url: 'http://192.168.0.12:32400/web/index.html'
-ombi:
-  title: 'Plex Peticiones'
-  icon: mdi:keyboard-caps
-  url: 'http://192.168.0.12:3579'
 octoprint:
   title: 'OctoPrint'
   icon: mdi:printer-3d
   url: 'http://192.168.1.45:5000'
-ha:
-  title: 'Web HA'
-  icon: mdi:home
-  url: 'https://home-assistant.io'
 grafana:
   title: 'Grafana'
   icon: mdi:chart

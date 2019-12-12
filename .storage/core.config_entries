@@ -211,6 +211,23 @@
                 },
                 "title": "Plastico",
                 "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "host": "http://core-almond.local.hass.io:3001",
+                    "is_hassio": true,
+                    "type": "local"
+                },
+                "domain": "almond",
+                "entry_id": "548e5b19de694de9a6f5a4ae7e23968b",
+                "options": {},
+                "source": "hassio",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Almond",
+                "version": 1
             }
         ]
     },

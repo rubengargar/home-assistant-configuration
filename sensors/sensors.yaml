@@ -1,17 +1,3 @@
-#Speed Test
-# - speedtestdotnet:
-#   monitored_conditions:
-#     - ping
-#     - download
-#     - upload
-#PiHole
-# - platform: pi_hole
-#   host: localhost
-#   monitored_conditions:
-#     - ads_blocked_today
-#     - ads_percentage_today
-#     - domains_being_blocked
-#     - unique_clients
 #Certificados https://www.home-assistant.io/components/sensor.cert_expiry/
 # - platform: cert_expiry
 #   host: 'www.rubenga.eu'
@@ -53,8 +39,6 @@
   username: !secret dsm_user
   password: !secret dsm_pwd
   monitored_conditions:
-    - volume_percentage_used
-    - volume_percentage_used
     - volume_percentage_used
     - cpu_total_load
     - memory_real_usage

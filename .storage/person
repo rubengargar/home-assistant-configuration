@@ -2,10 +2,12 @@
     "data": {
         "persons": [
             {
-                "device_trackers": [],
+                "device_trackers": [
+                    "device_tracker.rubs"
+                ],
                 "id": "d013fc4665dc46a0a1bc9b716ca0ec86",
                 "name": "Rub\u00e9n",
-                "user_id": "2f174d04fa98465ca7549adb03093ace"
+                "user_id": "b923c8bf494f4f12a05fa32a2e2b03d5"
             }
         ]
     },

@@ -4,8 +4,16 @@ esphome:
   board: nodemcuv2
 
 wifi:
-  ssid: "RWLAN26"
-  password: "20682926"
+  ssid: !secret ssid
+  password: !secret wifipass
+  power_save_mode: none
+  manual_ip:
+    # Set this to the IP of the ESP
+    static_ip: 192.168.0.119
+    # Set this to the IP address of the router. Often ends with .1
+    gateway: 192.168.0.1
+    # The subnet of the network. 255.255.255.0 works for most home networks.
+    subnet: 255.255.255.0
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
@@ -62,24 +70,28 @@ sensor:
     trigger_pin: D8
     echo_pin: D7
     name: "Porcentaje pienso %"
-    update_interval: 10s
+    update_interval: 180s
     filters:
+    - filter_out: nan
     # Calculates in %
     # Replace 0.42 by the height of your container. From the sensor to the bottom.
     # I used this website to know how I should multiply my values :https://www.skillsyouneed.com/num/percent-change.html 
-    - lambda: return (0.235-x)*(100/0.235);
+    - lambda: return (0.23-x)*(100/0.23);
+    accuracy_decimals: 0
     unit_of_measurement: "%"
     
   - platform: ultrasonic
     trigger_pin: D8
     echo_pin: D7
     name: "Cat Food Remaining "
-    update_interval: 10s
+    update_interval: 180s
     filters:
+    - filter_out: nan
     # Calculates in %
     # Replace 0.42 by the height of your container. From the sensor to the bottom.
     # I used this website to know how I should multiply my values :https://www.skillsyouneed.com/num/percent-change.html 
-    - lambda: return (0.235-x)*100;
+    - lambda: return (0.23-x)*100;
+    accuracy_decimals: 2
     unit_of_measurement: "cm"
 
 time:

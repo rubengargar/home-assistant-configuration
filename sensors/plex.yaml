@@ -27,3 +27,21 @@
   port: !secret plex_port
   section_types:
     - show
+
+- platform: radarr
+  api_key: !secret radarr_api
+  host: !secret dsm_host
+  monitored_conditions:
+    - upcoming
+    - movies
+    - commands
+  days: 2
+- platform: sonarr
+  port: !secret sonarr_port
+  api_key: !secret sonarr_api
+  host: !secret dsm_host
+  monitored_conditions:
+    - upcoming
+    - series
+    - commands
+  days: 2

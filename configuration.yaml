@@ -54,25 +54,35 @@ ifttt:
 #  gateways:
 #     - key: !secret key_xiaomi_gateway
 
-meross_cloud:
-  username: !secret meross_username
-  password: !secret meross_password
+# meross_cloud:
+#   username: !secret meross_username
+#   password: !secret meross_password
 
 yeelight:
-    devices:
-      192.168.0.22:
-        name: Luz
-      192.168.0.23:
-        name: Flexo
+  # devices:
+  #   !secret bombilla1:
+  #     name: Luz
+  #   !secret bombilla2:
+  #     name: Flexo
 
 hue:
   bridges:
     - host: !secret echo_ip
 emulated_hue:
-  host_ip: 192.168.0.12
 
 wake_on_lan:
 
+pi_hole:
+  host: 'localhost:4865'
+  ssl: false
+  verify_ssl: false
+
+speedtestdotnet:
+  monitored_conditions:
+  - ping
+  - download
+  - upload
+  
 #telegram
 telegram_bot:
 - platform: polling
@@ -127,16 +137,17 @@ history_graph:
       - sensor.yr_temperature
     hours_to_show: 168
     refresh: 60
+
 #google
 google:
   client_id: !secret id_google
   client_secret: !secret secret_google
 
-weather:
-  - platform: aemet
-    name: AEMET
-    api_key: !secret aemet_token
-    station_id: !secret aemet_id
+# weather:
+#   - platform: aemet
+#     name: AEMET
+#     api_key: !secret aemet_token
+#     station_id: !secret aemet_id
 
 # Enables the frontend
 frontend:
@@ -145,12 +156,14 @@ frontend:
 # Enables configuration UI
 config:
 
+person:
 api:
 hassio:
 http:
-  ssl_certificate: !secret ssl_cert
-  ssl_key: !secret ssl_key
-  base_url: !secret base_url
+  # ssl_certificate: !secret ssl_cert
+  # ssl_key: !secret ssl_key
+  # base_url: !secret base_url
+  # trusted_proxies: !secret dsm_host
   # Uncomment this to add a password (recommended!)
   #  api_password: !secret http_password
    #Uncomment this if you are using SSL/TLS, running in Docker container, etc.

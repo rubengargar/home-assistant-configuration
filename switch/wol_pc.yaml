@@ -1,8 +1,0 @@
-- platform: wake_on_lan
-  mac_address: !secret ux_pc
-  name: "Uxia PC"
-  host: !secret UxiaIP
-- platform: wake_on_lan
-  mac_address: !secret rubs_pc
-  name: "Strelka"
-  host: !secret strelkaIP

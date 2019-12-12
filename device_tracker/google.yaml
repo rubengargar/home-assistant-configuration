@@ -1,3 +1,2 @@
-device_tracker:
-  - platform: google_maps
-    username: !secret gtrackuser
+- platform: google_maps
+  username: !secret gtrackuser

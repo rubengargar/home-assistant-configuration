@@ -18,8 +18,10 @@
   token: !secret waqi_token
   locations:
     - a-coruna
-  # stations:
-  #   - riazor
+    - vigo
+  stations:
+    - lope-de-vega
+    - riazor
 
 - platform: aemet
   name: AEMET
@@ -34,3 +36,6 @@
     - visibility
     - wind_speed
     - wind_bearing
+
+- platform: co2signal
+  token: !secret CO2SIGNAL

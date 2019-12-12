@@ -447,7 +447,7 @@
                 "device_id": "c39cd02768fc44d2a1e64907988effbf",
                 "disabled_by": null,
                 "entity_id": "sensor.porcentaje_pienso",
-                "name": null,
+                "name": "Pienso",
                 "platform": "esphome",
                 "unique_id": "califoodsensorporcentaje_pienso_"
             },
@@ -468,6 +468,15 @@
                 "name": null,
                 "platform": "garbage_collection",
                 "unique_id": "f0c5c999-bbbf-4457-a4fc-5c189358c5bc"
+            },
+            {
+                "config_entry_id": "e13f58731b3749809019532b11d7acb0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.plex_chrome",
+                "name": null,
+                "platform": "plex",
+                "unique_id": "5bb488dd8cdc7e658ec21b82562191262f073388:r05jocjx0bp25q4axw2g8mg7"
             }
         ]
     },

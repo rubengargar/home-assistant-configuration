@@ -73,6 +73,10 @@
                 {
                     "type": "module",
                     "url": "/community_plugin/weather-card/weather-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/bar-card/bar-card.js"
                 }
             ],
             "title": "Home",
@@ -251,7 +255,7 @@
                                             "entity": "script.57658975357"
                                         },
                                         {
-                                            "entity": "sensor.cats_fed"
+                                            "entity": "input_datetime.last_time_food"
                                         }
                                     ],
                                     "show_header_toggle": false,
@@ -260,6 +264,19 @@
                             ],
                             "title": "Comedero Cali",
                             "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.google_travel_time_driving"
+                                },
+                                {
+                                    "entity": "sensor.google_travel_time_transit"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Transporte",
+                            "type": "entities"
                         }
                     ],
                     "path": "default_view",
@@ -305,10 +322,6 @@
                             "type": "custom:podcast-card"
                         },
                         {
-                            "entity": "media_player.echo_plus_de_ruben",
-                            "type": "media-control"
-                        },
-                        {
                             "entity": "sensor.radarr_upcoming_media",
                             "hide_empty": true,
                             "image_style": "fanart",
@@ -330,6 +343,22 @@
                             "type": "horizontal-stack"
                         },
                         {
+                            "artwork": "cover",
+                            "entity": "media_player.echo_plus_de_ruben",
+                            "icon": "mdi:spotify",
+                            "shortcuts": {
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:cat",
+                                        "id": "spotify:user:spotify:playlist:37i9dQZF1DZ06evO2O09Hg",
+                                        "type": "playlist"
+                                    }
+                                ],
+                                "columns": 4
+                            },
+                            "type": "custom:mini-media-player"
+                        },
+                        {
                             "cards": [
                                 {
                                     "entity": "media_player.echo_plus_de_ruben",
@@ -349,22 +378,6 @@
                                 }
                             ],
                             "type": "horizontal-stack"
-                        },
-                        {
-                            "artwork": "cover",
-                            "entity": "media_player.echo_plus_de_ruben",
-                            "icon": "mdi:spotify",
-                            "shortcuts": {
-                                "buttons": [
-                                    {
-                                        "icon": "mdi:cat",
-                                        "id": "spotify:user:spotify:playlist:37i9dQZF1DZ06evO2O09Hg",
-                                        "type": "playlist"
-                                    }
-                                ],
-                                "columns": 4
-                            },
-                            "type": "custom:mini-media-player"
                         }
                     ],
                     "icon": "mdi:television",
@@ -486,6 +499,21 @@
                             "type": "custom:mini-graph-card"
                         },
                         {
+                            "entities": [
+                                {
+                                    "entity": "sensor.synology_dsm_network_up"
+                                },
+                                {
+                                    "entity": "sensor.synology_dsm_network_down"
+                                }
+                            ],
+                            "hours_to_show": 168,
+                            "icon": "mdi:server",
+                            "name": "Arturito",
+                            "points_per_hour": 0.25,
+                            "type": "custom:mini-graph-card"
+                        },
+                        {
                             "align_icon": "left",
                             "align_state": "center",
                             "entities": [
@@ -499,7 +527,29 @@
                             "type": "custom:mini-graph-card"
                         },
                         {
-                            "columns": 2,
+                            "cards": [
+                                {
+                                    "entity": "sensor.pi_hole_ads_blocked_today",
+                                    "icon": "mdi:ladybug",
+                                    "name": "Ads bloqueados hoy",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_unique_clients",
+                                    "name": "Clientes DNS",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_domains_blocked",
+                                    "name": "Dominios",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "name": "Pi-hole",
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "columns": 3,
                             "entities": [
                                 {
                                     "entity": "switch.uxia_pc",
@@ -513,6 +563,13 @@
                                     "tap_action": {
                                         "action": "call-service",
                                         "service": "script.Strelka"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.arturito",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.Arturito"
                                     }
                                 }
                             ],
@@ -592,28 +649,6 @@
                             "type": "glance"
                         },
                         {
-                            "cards": [
-                                {
-                                    "entity": "sensor.pi_hole_ads_blocked_today",
-                                    "icon": "mdi:ladybug",
-                                    "name": "Ads bloqueados hoy",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_dns_unique_clients",
-                                    "name": "Clientes DNS",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_domains_blocked",
-                                    "name": "Dominios",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "name": "Pi-hole",
-                            "type": "horizontal-stack"
-                        },
-                        {
                             "entities": [
                                 "sensor.califood_wifi_signal"
                             ],
@@ -622,33 +657,90 @@
                             "type": "entities"
                         },
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "sensor.synology_dsm_network_up"
+                                    "cards": [
+                                        {
+                                            "entity": "sensor.synology_dsm_cpu_load_total",
+                                            "title": "CPU",
+                                            "title_position": "inside",
+                                            "type": "custom:bar-card"
+                                        },
+                                        {
+                                            "entity": "sensor.synology_dsm_memory_usage_real",
+                                            "title": "RAM",
+                                            "title_position": "inside",
+                                            "type": "custom:bar-card"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 },
                                 {
-                                    "entity": "sensor.synology_dsm_network_down"
+                                    "cards": [
+                                        {
+                                            "entity": "sensor.synology_dsm_volume_used_volume_1",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Sistema (Vol.1)",
+                                            "severity": {
+                                                "green": null,
+                                                "red": 90,
+                                                "yellow": null
+                                            },
+                                            "theme": "Backend-selected",
+                                            "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.synology_dsm_volume_used_volume_2",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Personal (Vol.2)",
+                                            "severity": {
+                                                "green": null,
+                                                "red": 90,
+                                                "yellow": null
+                                            },
+                                            "theme": "Backend-selected",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 },
                                 {
-                                    "entity": "sensor.synology_dsm_memory_usage_real"
-                                },
-                                {
-                                    "entity": "sensor.synology_dsm_cpu_load_total"
-                                },
-                                {
-                                    "entity": "sensor.synology_dsm_volume_used_volume_1"
-                                },
-                                {
-                                    "entity": "sensor.synology_dsm_volume_used_volume_2"
-                                },
-                                {
-                                    "entity": "sensor.synology_dsm_volume_used_volume_3"
-                                },
-                                {
-                                    "entity": "sensor.synology_dsm_volume_used_volume_4"
+                                    "cards": [
+                                        {
+                                            "entity": "sensor.synology_dsm_volume_used_volume_3",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Multimedia (Vol.3)",
+                                            "severity": {
+                                                "green": null,
+                                                "red": 90,
+                                                "yellow": null
+                                            },
+                                            "theme": "Backend-selected",
+                                            "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.synology_dsm_volume_used_volume_4",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Docker (Vol.4)",
+                                            "severity": {
+                                                "green": null,
+                                                "red": 90,
+                                                "yellow": null
+                                            },
+                                            "theme": "Backend-selected",
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 }
                             ],
-                            "type": "entities"
+                            "name": "ArturitoHDD",
+                            "title": "Arturito",
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:ethernet",
@@ -1554,6 +1646,28 @@
                             "show_header_toggle": false,
                             "title": "Links",
                             "type": "entities"
+                        },
+                        {
+                            "card": {
+                                "content": "Snapshots are stale! Please visit the \"Hass.io Google Drive Backup\" add-on status page for details.",
+                                "title": "Stale Snapshots!`",
+                                "type": "markdown"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "binary_sensor.snapshots_stale",
+                                    "state_not": "False"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "script.57658975361"
+                                }
+                            ],
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:settings",
@@ -1561,7 +1675,11 @@
                     "title": "System"
                 },
                 {
-                    "badges": [],
+                    "badges": [
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
                     "cards": [
                         {
                             "entities": [
@@ -1575,10 +1693,16 @@
                                     "entity": "input_number.servo_control"
                                 },
                                 {
-                                    "entity": "automation.alimentar_al_bicho"
+                                    "entity": "input_number.servo_time"
                                 },
                                 {
-                                    "entity": "sensor.cats_fed"
+                                    "entity": "automation.notificacion_pienso_bajo"
+                                },
+                                {
+                                    "entity": "input_datetime.everyday_food"
+                                },
+                                {
+                                    "entity": "input_datetime.last_time_food"
                                 }
                             ],
                             "show_header_toggle": false,

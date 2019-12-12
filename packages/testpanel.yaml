@@ -1,0 +1,9 @@
+script:        
+  '57658975360': # unique script id
+    alias: Check logs
+    sequence:
+      - service: homeassistant.check_config
+  '57658975361': # unique script id
+    alias: Reload core
+    sequence:
+      - service: homeassistant.reload_core_config

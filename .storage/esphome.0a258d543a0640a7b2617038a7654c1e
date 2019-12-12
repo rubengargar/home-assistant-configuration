@@ -11,7 +11,7 @@
             }
         ],
         "device_info": {
-            "compilation_time": "Nov 28 2019, 21:28:33",
+            "compilation_time": "Dec 12 2019, 23:34:38",
             "esphome_version": "1.14.3",
             "has_deep_sleep": false,
             "mac_address": "BC:DD:C2:2A:02:5A",
@@ -41,7 +41,7 @@
                 "unit_of_measurement": "dB"
             },
             {
-                "accuracy_decimals": 2,
+                "accuracy_decimals": 0,
                 "force_update": false,
                 "icon": "mdi:arrow-expand-vertical",
                 "key": 4166149328,

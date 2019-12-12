@@ -1,0 +1,97 @@
+esphome:
+  name: caliwater
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: !secret ssid
+  password: !secret wifipass
+  power_save_mode: none
+  manual_ip:
+    # Set this to the IP of the ESP
+    static_ip: 192.168.0.118
+    # Set this to the IP address of the router. Often ends with .1
+    gateway: 192.168.0.1
+    # The subnet of the network. 255.255.255.0 works for most home networks.
+    subnet: 255.255.255.0
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Caliwater Fallback Hotspot"
+    password: "2BqHfZWwUJCg"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "misterwanda"
+
+ota:
+  password: "misterwanda"
+
+sensor:
+  - platform: uptime
+    name: "ESP Fish Pond System Uptime"
+
+  - platform: wifi_signal
+    name: "ESP Fish Pond WiFi Signal"
+    update_interval: 15s
+
+switch:
+  ## restart
+  - platform: restart
+    name: "ESP Fish Pond Restart"
+
+  ## relay / pump
+  - platform: gpio
+    pin: D2
+    name: "ESP Fish Pond Pump"
+    id: esp_fishpond_pump
+
+binary_sensor:
+  - platform: status
+    name: "ESP Fish Pond System Status"
+
+  ## button - toggle relay
+  - platform: gpio
+    name: "ESP Fish Pond Button"
+    pin:
+      number: D3
+      inverted: true
+    # Toggle pump when user presses the Sonoff Button
+    on_press:
+      - switch.toggle: esp_fishpond_pump
+
+  # onboard header pin - sensor
+  # when threshold is reached, turn off
+  - platform: gpio
+    name: "esp_fishpond_gpio14"
+    pin:
+      number: 14
+      mode: input_pullup
+    on_press:
+      - switch.turn_off: esp_fishpond_pump
+      
+  - platform: gpio
+    pin: D5
+    name: "PIR Sensor"
+    device_class: motion
+## Use time
+time:
+  - platform: homeassistant
+    ## Set your timezone
+    timezone: Europe/Madrid
+    id: homeassistant_time
+    on_time:
+      # Switch on on the hour
+      - seconds: 0
+        minutes: 0
+        hours: '5'
+        then:
+          - switch.turn_on: esp_fishpond_pump
+          # Switch off 10 minutes later
+          - delay: 10min
+          - switch.turn_off: esp_fishpond_pump

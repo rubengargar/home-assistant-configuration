@@ -1,0 +1,11 @@
+Aspiradora:
+  name: Alexa
+  view: yes
+  icon: mdi:amazon-alexa
+  entities:
+    - group.alexa
+
+Alexa:
+    - media_player.echo_dot_de_ruben
+    - media_player.echo_plus_de_ruben
+    - media_player.ruben_s_alexa_apps
